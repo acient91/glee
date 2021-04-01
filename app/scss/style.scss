@@ -370,7 +370,7 @@
   }
 
   &__item {
-    padding-left: 80px;    
+    padding-left: 80px;
   }
 
   &__item-support,
@@ -383,26 +383,26 @@
   &__item-delivery::before,
   &__item-payment::before {
     content: '';
-    position: absolute;    
+    position: absolute;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     left: -90px;
-    width: 50px; 
+    width: 50px;
     height: 50px;
   }
 
   &__item-support::before {
-    background-image: url('../images/icons/support.svg');    
+    background-image: url('../images/icons/support.svg');
   }
 
-  &__item-delivery::before {    
-    background-image: url('../images/icons/delivery.svg');       
+  &__item-delivery::before {
+    background-image: url('../images/icons/delivery.svg');
   }
 
-  &__item-payment::before {  
-    background-image: url('../images/icons/payment.svg');      
-  }  
+  &__item-payment::before {
+    background-image: url('../images/icons/payment.svg');
+  }
 
   &__title {
     font-size: 18px;
@@ -420,6 +420,86 @@
   }
 }
 
+.products {
+  padding: 75px 0 120px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    @extend %DMSans-700;
+    color: #191919;
+    font-size: 36px;
+    margin-bottom: 35px;
+  }
+
+  &__nav {
+    display: flex;
+    margin-bottom: 110px;
+  }
+
+  &__list:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__btn {
+    @extend %DMSans-700;
+    font-size: 16px;
+    color: #8b8b8b;
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color .3s ease;
+  }
+
+  &__btn:hover {
+    color: #191919;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__item:not(:nth-child(4n)) {
+    margin-right: 70px;
+
+  }
+
+  &__item:not(:nth-child(n+5)) {
+    margin-bottom: 120px;
+  }
+
+  &__img {
+    margin-bottom: 60px;
+  }
+
+  &__item-title   {
+    @extend %DMSans-500;
+    font-size: 16px;
+    line-height: 2;
+    color: #243f4d;
+    text-align: center;
+  }
+
+  &__price {
+    @extend %DMSans-700;
+    color: #a3bbc8;
+    font-size: 16px;
+    line-height: 2;
+    display: block;
+    text-align: center;
+  }
+}
+
+.mixitup-control-active {
+  color: #191919;
+}
 
 
 
