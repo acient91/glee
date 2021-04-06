@@ -1,10 +1,24 @@
 .top-slider {
-  padding-top: 220px;
-  position: relative;
-  background-color: #fcd7b6;
   
   &__inner {
+    padding-top: 220px;
     z-index: 2;    
+    background-color: #fcd7b6;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/slider/elipse.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      max-width: 635px;
+      min-height: 635px;
+      top: 100px;
+      right: 80px;
+      width: 100%;
+    }
   }
 
   &__items {
@@ -56,23 +70,10 @@
   }
 }
 
-.top-slider::after {
-  content: '';
-  position: absolute;
-  background-image: url('../images/slider/elipse.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  max-width: 635px;
-  min-height: 635px;
-  top: 100px;
-  right: 80px;
-}
-
 .slick-dots {
   display: flex;
   justify-content: center;
-  margin: 200px 0 45px;
+  padding: 200px 0 45px;
 
   .slick-active {
     button {
