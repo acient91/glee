@@ -1,0 +1,161 @@
+.header {
+  min-height: 145px;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    font-size: 15px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  &__link {
+    transition: border-color .3s ease;
+    border-bottom: 1px solid transparent;
+
+  }
+
+  &__link:hover {
+    border-color: $default;
+  }
+
+}
+
+.logo {
+  &__link {
+    display: flex;
+  }
+
+  &__img {
+    margin-right: 15px;
+  }
+
+  &__title {
+    font-size: 36px;
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__link-search,
+  &__link-menu {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #edf1f4;
+    text-align: center;
+    position: relative;
+    transition: background-color .3s ease;
+    path {
+      transition: fill .3s ease;
+    }
+  }  
+
+  &__link-search,
+  &__link {
+    margin-right: 20px;
+  }
+
+  &__link-search:hover,
+  &__link-menu:hover,
+  &__link-heart:hover,
+  &__link-cart:hover {    
+    background-color: #fcd7b6;
+    path {
+      fill: #fff;
+    }
+  }
+
+  &__link-heart,
+  &__link-cart {
+    background-color: #fcd7b6;
+  }
+
+  &__link {
+    display: flex;
+    width: 180px;
+    height: 50px;
+    border-radius: 50px;
+    position: relative;
+  }
+
+  &__link::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 32px;
+    top: 10px;
+    right: 50%;
+    background-color: #fde7d3;
+    z-index: 1;
+  }
+
+  &__link-menu {
+    background-color: #a3bbc8;
+  }
+
+  &__img {
+    margin: 15px auto;
+  }
+
+  &__img-heart,
+  &__img-cart {
+    margin: 16px 36px;
+  }
+
+  &__link-cart,
+  &__link-heart {
+    position: relative;
+    transition: background-color .3s ease;
+  }
+
+  &__link-heart {
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+  }
+
+  &__link-cart {
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+  }
+
+  &__link-heart:hover,
+  &__link-cart:hover {
+    background-color: #a3bbc8;
+  }
+
+  &__link-cart:hover {
+    border-radius: 0 35px 35px 0;
+  }
+
+  &__link-heart:hover {
+    border-radius: 35px 0 0 35px;
+  }
+
+  &__num {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 8px;
+    right: 30px;
+    font-size: 8px;
+    text-align: center;
+    line-height: 15px;
+  }
+}

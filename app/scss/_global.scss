@@ -10,6 +10,7 @@ body {
   @extend %Rubik-500;
   display: flex;
   flex-direction: column;  
+  background-color: #fff;
 }
 
 main {
@@ -20,15 +21,15 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+
+  &--main {
+    max-width: 1800px;   
+    width: 100%;
+  }
 }
 
-.container-main {
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.sr-only {
+.sr-only,
+.sr-form {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -39,4 +40,11 @@ main {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+button {
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  outline: transparent;
 }

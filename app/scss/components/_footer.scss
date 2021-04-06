@@ -1,0 +1,155 @@
+.footer-top {
+  padding: 75px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dae4e9;
+
+  &__logo,
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    @extend %DMSans-700;
+    color: #1f2044;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  &__list,
+  &__item-text {
+    @extend %Rubik-400;
+    font-size: 14px;
+    color: $text;
+    line-height: 24px;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__list-link {
+    transition: border-color .3s ease;
+    border-bottom: 1px solid transparent;
+
+  }
+
+  &__list-link:hover {
+    border-color: $default;
+  }
+
+  &__item-text {
+    max-width: 270px;
+  }
+
+  &__item-text:not(:last-child) {
+    margin-bottom: 36px;
+  }
+
+  &__input {
+    max-width: 170px;
+    width: 100%;
+    border: transparent;
+    background-color: #fef7f0;
+    padding: 15px;
+    outline: transparent;
+
+    &::placeholder {
+      @extend %DMSans-500;
+      font-size: 12px;
+      color: #234969;
+    }
+  }
+
+  &__btn {
+    border: transparent;
+    color: #fff;
+    background-color: #a3bbc8;
+    padding: 17px 20px;
+    margin-left: -4px;
+    cursor: pointer;
+    @extend %DMSans-500;
+    font-size: 14px;
+    transition: background-color .3s ease, color .3s ease;
+  }
+
+  &__btn:hover {
+    background-color: #fcd7b6;
+    color: $default;
+  }
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  max-width: 195px;
+
+  &__item {
+    @extend %Rubik-400;
+    font-size: 14px;
+    line-height: 2;
+    color: $text;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    text-transform: uppercase;
+  }
+
+  &__link {
+    transition: border-color .3s ease;
+    border-bottom: 1px solid transparent;
+
+  }
+
+  &__link:hover {
+    border-color: $default;
+  }
+}
+
+.footer-bottom {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__copy,
+  &__item {
+    @extend %Rubik-400;
+    font-size: 14px;
+    color: $text;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 15px;
+    padding-right: 18px;
+
+    &::before {
+      content: '|';
+      position: absolute;
+      right: 0;
+      font-size: 16px;
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    transition: border-color .3s ease;
+    border-bottom: 1px solid transparent;
+
+  }
+
+  &__link:hover {
+    border-color: $default;
+  }
+}

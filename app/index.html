@@ -14,129 +14,183 @@
 <body>
 
   <header class="header">
-    <div class="container-main">
-      <div class="header__inner">
+    <div class="container container--main">
+      <nav class="menu">
         <div class="logo">
-          <span class="sr-only">Logo</span>
           <a class="logo__link" href="#">
-            <img class="logo__img" src="images/logo.svg" alt="logo">
-            <h1 class="logo__title">Glee.</h1>
+            <span class="sr-only">Logo</span>
+            <svg class="logo__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="146" height="39" viewBox="0 0 146 39">
+              <image id="Glee." width="146" height="39"
+                xlink:href="data:img/png;base64,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" />
+            </svg>
           </a>
         </div>
-        <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link" href="#">Home+</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">About</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Services</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Pages+</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">News</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Home+</a>
+            <span class="sr-only">Home</span>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">About</a>
+            <span class="sr-only">About</span>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Services</a>
+            <span class="sr-only">Services</span>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Pages+</a>
+            <span class="sr-only">Pages</span>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">News</a>
+            <span class="sr-only">News</span>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Contact</a>
+            <span class="sr-only">Contact</span>
+          </li>
+        </ul>
         <div class="user-nav">
-          <span class="sr-only">search</span>
-          <a class="user-nav__link-search" href="#">
-            <img class="user-nav__img" src="images/icons/search.svg" alt="search">
-          </a>
+          <button class="user-nav__link-search">
+            <span class="sr-only">search</span>
+            <svg class="user-nav__img" xmlns="http://www.w3.org/2000/svg" width="15.28" height="15.281"
+              viewBox="0 0 15.28 15.281">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: #243f4d;
+                    fill-rule: evenodd;
+                  }
+                </style>
+              </defs>
+              <path id="icon" class="cls-1"
+                d="M1547.7,72.076a0.617,0.617,0,0,1,.75.485,2.583,2.583,0,0,0,.78,1.489,3.036,3.036,0,0,0,1.49.777,0.636,0.636,0,0,1,.49.743,0.649,0.649,0,0,1-.72.515,4.21,4.21,0,0,1-2.14-1.13,4.164,4.164,0,0,1-1.13-2.136A0.6,0.6,0,0,1,1547.7,72.076ZM1550.98,66a6.267,6.267,0,0,1,6.28,6.257,6.136,6.136,0,0,1-.57,2.6l2.34,2.036c1.7,1.746.74,3.266,0.29,3.717-0.42.454-1.99,1.414-3.73-.292l-2.06-2.35A6.261,6.261,0,1,1,1550.98,66Zm5.55,13.517a1.352,1.352,0,0,0,1.88.226,1.313,1.313,0,0,0-.23-1.874l-2.16-1.88a6.236,6.236,0,0,1-1.37,1.34Zm-5.55-2.312a4.948,4.948,0,1,0-4.97-4.948A4.963,4.963,0,0,0,1550.98,77.2Z"
+                transform="translate(-1544.72 -66)" />
+            </svg>
+          </button>
           <div class="user-nav__link">
-            <span class="sr-only">like's</span>
             <a class="user-nav__link-heart" href="#">
-              <img class="user-nav__img-heart" src="images/icons/heart.svg" alt="heart">
+              <span class="sr-only">like's</span>
+              <svg class="user-nav__img-heart" xmlns="http://www.w3.org/2000/svg" width="17.87" height="15.531"
+                viewBox="0 0 17.87 15.531">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #243f4d;
+                      fill-rule: evenodd;
+                    }
+                  </style>
+                </defs>
+                <path class="cls-1"
+                  d="M1648.91,86.245a0.731,0.731,0,0,1-.28-0.056c-0.35-.15-8.65-3.749-8.65-10.76a28.181,28.181,0,0,0,13.05-4.707,4.817,4.817,0,0,1,4.81,4.684c0,7.034-8.29,10.634-8.65,10.783A0.7,0.7,0,0,1,1648.91,86.245Zm-4.11-14.138a3.427,3.427,0,0,0-3.41,3.346c0,5.407,6.13,8.662,7.52,9.334,1.4-.672,7.52-3.93,7.52-9.358a3.406,3.406,0,0,0-6.81.024,0.709,0.709,0,0,1-.71.669h0a0.694,0.694,0,0,1-.7-0.669A3.427,3.427,0,0,0,1644.8,72.106Z"
+                  transform="translate(-1639.97 -70.719)" />
+              </svg>
               <span class="user-nav__num">0</span>
             </a>
-            <span class="sr-only">cart</span>
             <a class="user-nav__link-cart" href="#">
-              <img class="user-nav__img-cart" src="images/icons/cart.svg" alt="cart">
+              <span class="sr-only">cart</span>
+              <svg class="user-nav__img-cart" xmlns="http://www.w3.org/2000/svg" width="18.94" height="16.969"
+                viewBox="0 0 18.94 16.969">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #243f4d;
+                      fill-rule: evenodd;
+                    }
+                  </style>
+                </defs>
+                <path class="cls-1"
+                  d="M1721.53,85.978a2.073,2.073,0,1,1,0-4.147h0a2.056,2.056,0,0,1,1.46.6,2.03,2.03,0,0,1,.61,1.466A2.071,2.071,0,0,1,1721.53,85.978Zm0-2.963h0a0.889,0.889,0,1,0,.34,1.71,0.9,0.9,0,0,0,.55-0.824,0.92,0.92,0,0,0-.26-0.629A0.9,0.9,0,0,0,1721.53,83.015Zm8.39,2.963a2.045,2.045,0,0,1-1.46-.607,2.068,2.068,0,0,1,1.46-3.54h0a1.953,1.953,0,0,1,1.47.6,2.085,2.085,0,0,1-.67,3.383A2.093,2.093,0,0,1,1729.92,85.978Zm0-2.963h0a0.978,0.978,0,0,0-.82.548,0.887,0.887,0,0,0,1.16,1.161,0.891,0.891,0,0,0,.29-1.452A0.9,0.9,0,0,0,1729.92,83.015Zm-11.27.164a0.562,0.562,0,0,1-.25-0.056,0.59,0.59,0,0,1-.29-0.787,3.686,3.686,0,0,1,3.05-2.151l-1.05-5.391a0.591,0.591,0,1,1,1.16-.228l1.09,5.578h9.43l1.8-6.771h-13.3a4.346,4.346,0,0,1-4.28-3.693,0.587,0.587,0,0,1,.49-0.673,0.6,0.6,0,0,1,.68.5,3.159,3.159,0,0,0,3.11,2.682h14.07a0.582,0.582,0,0,1,.47.232,0.594,0.594,0,0,1,.11.513l-2.13,7.956a0.59,0.59,0,0,1-.57.44h-10.36a0.03,0.03,0,0,0-.02,0,2.66,2.66,0,0,0-2.68,1.51A0.586,0.586,0,0,1,1718.65,83.178Z"
+                  transform="translate(-1716 -69)" />
+              </svg>
               <span class="user-nav__num">0</span>
             </a>
           </div>
-          <span class="sr-only">user-menu</span>
-          <a class="user-nav__link-menu" href="#">
+          <button class="user-nav__link-menu">
+            <span class="sr-only">user-menu</span>
             <img class="user-nav__img" src="images/icons/menu.svg" alt="menu">
-          </a>
+          </button>
         </div>
-      </div>
+      </nav>
     </div>
   </header>
 
   <main class="main">
 
     <section class="top-slider">
-      <div class="container-main">
-        <div class="top-slider__inner">
-          <div class="top-slider__item">
+      <div class="container container--main">
+        <ul class="top-slider__inner">
+          <li class="top-slider__item">
             <div class="top-slider__items">
               <div class="top-slider__content">
-                <h2 class="top-slider__title">
+                <h3 class="top-slider__title">
                   Smart and trendy
-                </h2>
-                <p class="top-slider__text">
-                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                </p>
+                </h3>
+                <div class="top-slider__text">
+                  <p>
+                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
                 <a class="top-slider__link" href="#">Shop Now</a>
               </div>
-              <img class="top-slider__img" src="images/slider/1.png" alt="">
+              <img class="top-slider__img" src="images/slider/1.png" alt="sofa">
             </div>
-          </div>
-          <div class="top-slider__item">
+          </li>
+          <li class="top-slider__item">
             <div class="top-slider__items">
               <div class="top-slider__content">
-                <h2 class="top-slider__title">
+                <h3 class="top-slider__title">
                   Smart and trendy
-                </h2>
-                <p class="top-slider__text">
-                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                </p>
+                </h3>
+                <div class="top-slider__text">
+                  <p>
+                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
                 <a class="top-slider__link" href="#">Shop Now</a>
               </div>
-              <img class="top-slider__img" src="images/slider/1.png" alt="">
+              <img class="top-slider__img" src="images/slider/1.png" alt="sofa">
             </div>
-          </div>
-          <div class="top-slider__item">
+          </li>
+          <li class="top-slider__item">
             <div class="top-slider__items">
               <div class="top-slider__content">
-                <h2 class="top-slider__title">
+                <h3 class="top-slider__title">
                   Smart and trendy
-                </h2>
-                <p class="top-slider__text">
-                  Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                </p>
+                </h3>
+                <div class="top-slider__text">
+                  <p>
+                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                  </p>
+                </div>
                 <a class="top-slider__link" href="#">Shop Now</a>
               </div>
-              <img class="top-slider__img" src="images/slider/1.png" alt="">
+              <img class="top-slider__img" src="images/slider/1.png" alt="sofa">
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
-    </section>
-
-    <section class="features">
-      <div class="container-main">
+      <div class="features">
         <div class="features__inner">
-          <div class="features__item-support">
-            <h2 class="features__title">Support 24/7.</h2>
-            <p class="features__text">Contact us 24 hours a day, 7 days a week.</p>
+          <div class="features__item features__item--support">
+            <h3 class="features__title">Support 24/7.</h3>
+            <div class="features__text">
+              <p>Contact us 24 hours a day, 7 days a week.</p>
+            </div>
           </div>
-          <div class="features__item-delivery">
-            <h2 class="features__title">Delivery.</h2>
-            <p class="features__text">Free shipping on all US order.</p>
+          <div class="features__item features__item--delivery">
+            <h3 class="features__title">Delivery.</h3>
+            <div class="features__text">
+              <p>Free shipping on all US order.</p>
+            </div>
           </div>
-          <div class="features__item-payment">
-            <h2 class="features__title">100% Payment secure.</h2>
-            <p class="features__text">We ensure secure payment
-              with PEV.</p>
+          <div class="features__item features__item--payment">
+            <h3 class="features__title">100% Payment secure.</h3>
+            <div class="features__text">
+              <p>We ensure secure payment with PEV.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -144,99 +198,502 @@
 
     <section class="products">
       <div class="container">
-        <div class="products__wrapper">
-          <h2 class="products__title">Products of the week</h2>
-          <ul class="products__nav">
-            <li class="products__list">
-              <button class="products__btn" data-filter="all">All</button>
-            </li>
-            <li class="products__list">
-              <button class="products__btn" data-filter=".category-a">Furnitures</button>
-            </li>
-            <li class="products__list">
-              <button class="products__btn" data-filter=".category-b">Chairs</button>
-            </li>
-            <li class="products__list">
-              <button class="products__btn" data-filter=".category-c">Lighting</button>
-            </li>
-            <li class="products__list">
-              <button class="products__btn" data-filter=".category-d">Decor</button>
-            </li>
-          </ul>
-        </div>
-        <div class="products__inner">
-          <div class="products__item mix category-a category-d All">
-            <img class="products__img" src="images/products/1.jpg" alt="Wooden radio">
-            <h3 class="products__item-title">Wooden radio</h3>
-            <span class="products__price">$29.00</span>
+        <h2 class="products__title">Products of the week</h2>
+
+        <ul class="filter">
+          <li class="filter__list">
+            <button class="filter__btn" data-filter="all">All</button>
+          </li>
+          <li class="filter__list">
+            <button class="filter__btn" data-filter=".category-a">Furnitures</button>
+          </li>
+          <li class="filter__list">
+            <button class="filter__btn" data-filter=".category-b">Chairs</button>
+          </li>
+          <li class="filter__list">
+            <button class="filter__btn" data-filter=".category-c">Lighting</button>
+          </li>
+          <li class="filter__list">
+            <button class="filter__btn" data-filter=".category-d">Decor</button>
+          </li>
+        </ul>
+
+        <div class="products__items">
+          <div class="products-item mix category-a category-d all">
+            <div class="products-item__img-box">
+              <img class="products-item__images" src="images/products/1.jpg" alt="Wooden radio">
+              <div class="products-item__link-box">
+                <a class="products-item__link" href="#">
+                  <svg width="15.28" height="15.281" viewBox="0 0 15.28 15.281">
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: #243f4d;
+                          fill-rule: evenodd;
+                        }
+                      </style>
+                    </defs>
+                    <path id="icon" class="cls-1"
+                      d="M1547.7,72.076a0.617,0.617,0,0,1,.75.485,2.583,2.583,0,0,0,.78,1.489,3.036,3.036,0,0,0,1.49.777,0.636,0.636,0,0,1,.49.743,0.649,0.649,0,0,1-.72.515,4.21,4.21,0,0,1-2.14-1.13,4.164,4.164,0,0,1-1.13-2.136A0.6,0.6,0,0,1,1547.7,72.076ZM1550.98,66a6.267,6.267,0,0,1,6.28,6.257,6.136,6.136,0,0,1-.57,2.6l2.34,2.036c1.7,1.746.74,3.266,0.29,3.717-0.42.454-1.99,1.414-3.73-.292l-2.06-2.35A6.261,6.261,0,1,1,1550.98,66Zm5.55,13.517a1.352,1.352,0,0,0,1.88.226,1.313,1.313,0,0,0-.23-1.874l-2.16-1.88a6.236,6.236,0,0,1-1.37,1.34Zm-5.55-2.312a4.948,4.948,0,1,0-4.97-4.948A4.963,4.963,0,0,0,1550.98,77.2Z"
+                      transform="translate(-1544.72 -66)" />
+                  </svg>
+                </a>
+                <a class="products-item__link" href="#">
+                  <svg width="18.94" height="16.969" viewBox="0 0 18.94 16.969">
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: #243f4d;
+                          fill-rule: evenodd;
+                        }
+                      </style>
+                    </defs>
+                    <path class="cls-1"
+                      d="M1721.53,85.978a2.073,2.073,0,1,1,0-4.147h0a2.056,2.056,0,0,1,1.46.6,2.03,2.03,0,0,1,.61,1.466A2.071,2.071,0,0,1,1721.53,85.978Zm0-2.963h0a0.889,0.889,0,1,0,.34,1.71,0.9,0.9,0,0,0,.55-0.824,0.92,0.92,0,0,0-.26-0.629A0.9,0.9,0,0,0,1721.53,83.015Zm8.39,2.963a2.045,2.045,0,0,1-1.46-.607,2.068,2.068,0,0,1,1.46-3.54h0a1.953,1.953,0,0,1,1.47.6,2.085,2.085,0,0,1-.67,3.383A2.093,2.093,0,0,1,1729.92,85.978Zm0-2.963h0a0.978,0.978,0,0,0-.82.548,0.887,0.887,0,0,0,1.16,1.161,0.891,0.891,0,0,0,.29-1.452A0.9,0.9,0,0,0,1729.92,83.015Zm-11.27.164a0.562,0.562,0,0,1-.25-0.056,0.59,0.59,0,0,1-.29-0.787,3.686,3.686,0,0,1,3.05-2.151l-1.05-5.391a0.591,0.591,0,1,1,1.16-.228l1.09,5.578h9.43l1.8-6.771h-13.3a4.346,4.346,0,0,1-4.28-3.693,0.587,0.587,0,0,1,.49-0.673,0.6,0.6,0,0,1,.68.5,3.159,3.159,0,0,0,3.11,2.682h14.07a0.582,0.582,0,0,1,.47.232,0.594,0.594,0,0,1,.11.513l-2.13,7.956a0.59,0.59,0,0,1-.57.44h-10.36a0.03,0.03,0,0,0-.02,0,2.66,2.66,0,0,0-2.68,1.51A0.586,0.586,0,0,1,1718.65,83.178Z"
+                      transform="translate(-1716 -69)" />
+                  </svg>
+                </a>
+                <button class="products-item__link">
+                  <svg width="17.87" height="15.531" viewBox="0 0 17.87 15.531">
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: #243f4d;
+                          fill-rule: evenodd;
+                        }
+                      </style>
+                    </defs>
+                    <path class="cls-1"
+                      d="M1648.91,86.245a0.731,0.731,0,0,1-.28-0.056c-0.35-.15-8.65-3.749-8.65-10.76a28.181,28.181,0,0,0,13.05-4.707,4.817,4.817,0,0,1,4.81,4.684c0,7.034-8.29,10.634-8.65,10.783A0.7,0.7,0,0,1,1648.91,86.245Zm-4.11-14.138a3.427,3.427,0,0,0-3.41,3.346c0,5.407,6.13,8.662,7.52,9.334,1.4-.672,7.52-3.93,7.52-9.358a3.406,3.406,0,0,0-6.81.024,0.709,0.709,0,0,1-.71.669h0a0.694,0.694,0,0,1-.7-0.669A3.427,3.427,0,0,0,1644.8,72.106Z"
+                      transform="translate(-1639.97 -70.719)" />
+                  </svg>
+                </button>
+              </div>
+              <h3 class="products-item__title">Wooden radio</h3>
+              <span class="products-item__price">$29.00</span>
+            </div>
           </div>
-          <div class="products__item mix category-a All">
-            <img class="products__img" src="images/products/2.jpg" alt="Wooden chair">
-            <h3 class="products__item-title">Wooden chair</h3>
-            <span class="products__price">$29.00</span>
-          </div>
-          <div class="products__item mix category-a All">
-            <img class="products__img" src="images/products/3.jpg" alt="White chair">
-            <h3 class="products__item-title">White chair</h3>
-            <span class="products__price">$29.00</span>
-          </div>
-          <div class="products__item mix category-b category-d All">
-            <img class="products__img" src="images/products/4.jpg" alt="Retro table">
-            <h3 class="products__item-title">Retro table</h3>
-            <span class="products__price">$29.00</span>
-          </div>
-          <div class="products__item mix category-b All">
-            <img class="products__img" src="images/products/5.jpg" alt="Wooden radio">
-            <h3 class="products__item-title">Wooden radio</h3>
-            <span class="products__price">$29.00</span>
-          </div>
-          <div class="products__item mix category-c category-d All">
-            <img class="products__img" src="images/products/6.jpg" alt="Wooden chair">
-            <h3 class="products__item-title">Wooden chair</h3>
-            <span class="products__price">$29.00</span>
-          </div>
-          <div class="products__item mix category-c category-b All">
-            <img class="products__img" src="images/products/7.jpg" alt="White chair">
-            <h3 class="products__item-title">White chair</h3>
-            <span class="products__price">$29.00</span>
-          </div>
-          <div class="products__item mix category-c category-d All">
-            <img class="products__img" src="images/products/8.jpg" alt="Retro table">
-            <h3 class="products__item-title">Retro table</h3>
-            <span class="products__price">$29.00</span>
-          </div>
+           <div class="products-item mix category-a all">
+             <div class="products-item__img-box">
+               <img class="products-item__images" src="images/products/2.jpg" alt="Wooden radio">
+               <div class="products-item__link-box">
+                 <a class="products-item__link" href="#">
+                   <svg width="15.28" height="15.281" viewBox="0 0 15.28 15.281">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path id="icon" class="cls-1"
+                       d="M1547.7,72.076a0.617,0.617,0,0,1,.75.485,2.583,2.583,0,0,0,.78,1.489,3.036,3.036,0,0,0,1.49.777,0.636,0.636,0,0,1,.49.743,0.649,0.649,0,0,1-.72.515,4.21,4.21,0,0,1-2.14-1.13,4.164,4.164,0,0,1-1.13-2.136A0.6,0.6,0,0,1,1547.7,72.076ZM1550.98,66a6.267,6.267,0,0,1,6.28,6.257,6.136,6.136,0,0,1-.57,2.6l2.34,2.036c1.7,1.746.74,3.266,0.29,3.717-0.42.454-1.99,1.414-3.73-.292l-2.06-2.35A6.261,6.261,0,1,1,1550.98,66Zm5.55,13.517a1.352,1.352,0,0,0,1.88.226,1.313,1.313,0,0,0-.23-1.874l-2.16-1.88a6.236,6.236,0,0,1-1.37,1.34Zm-5.55-2.312a4.948,4.948,0,1,0-4.97-4.948A4.963,4.963,0,0,0,1550.98,77.2Z"
+                       transform="translate(-1544.72 -66)" />
+                   </svg>
+                 </a>
+                 <a class="products-item__link" href="#">
+                   <svg width="18.94" height="16.969" viewBox="0 0 18.94 16.969">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path class="cls-1"
+                       d="M1721.53,85.978a2.073,2.073,0,1,1,0-4.147h0a2.056,2.056,0,0,1,1.46.6,2.03,2.03,0,0,1,.61,1.466A2.071,2.071,0,0,1,1721.53,85.978Zm0-2.963h0a0.889,0.889,0,1,0,.34,1.71,0.9,0.9,0,0,0,.55-0.824,0.92,0.92,0,0,0-.26-0.629A0.9,0.9,0,0,0,1721.53,83.015Zm8.39,2.963a2.045,2.045,0,0,1-1.46-.607,2.068,2.068,0,0,1,1.46-3.54h0a1.953,1.953,0,0,1,1.47.6,2.085,2.085,0,0,1-.67,3.383A2.093,2.093,0,0,1,1729.92,85.978Zm0-2.963h0a0.978,0.978,0,0,0-.82.548,0.887,0.887,0,0,0,1.16,1.161,0.891,0.891,0,0,0,.29-1.452A0.9,0.9,0,0,0,1729.92,83.015Zm-11.27.164a0.562,0.562,0,0,1-.25-0.056,0.59,0.59,0,0,1-.29-0.787,3.686,3.686,0,0,1,3.05-2.151l-1.05-5.391a0.591,0.591,0,1,1,1.16-.228l1.09,5.578h9.43l1.8-6.771h-13.3a4.346,4.346,0,0,1-4.28-3.693,0.587,0.587,0,0,1,.49-0.673,0.6,0.6,0,0,1,.68.5,3.159,3.159,0,0,0,3.11,2.682h14.07a0.582,0.582,0,0,1,.47.232,0.594,0.594,0,0,1,.11.513l-2.13,7.956a0.59,0.59,0,0,1-.57.44h-10.36a0.03,0.03,0,0,0-.02,0,2.66,2.66,0,0,0-2.68,1.51A0.586,0.586,0,0,1,1718.65,83.178Z"
+                       transform="translate(-1716 -69)" />
+                   </svg>
+                 </a>
+                 <button class="products-item__link">
+                   <svg width="17.87" height="15.531" viewBox="0 0 17.87 15.531">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path class="cls-1"
+                       d="M1648.91,86.245a0.731,0.731,0,0,1-.28-0.056c-0.35-.15-8.65-3.749-8.65-10.76a28.181,28.181,0,0,0,13.05-4.707,4.817,4.817,0,0,1,4.81,4.684c0,7.034-8.29,10.634-8.65,10.783A0.7,0.7,0,0,1,1648.91,86.245Zm-4.11-14.138a3.427,3.427,0,0,0-3.41,3.346c0,5.407,6.13,8.662,7.52,9.334,1.4-.672,7.52-3.93,7.52-9.358a3.406,3.406,0,0,0-6.81.024,0.709,0.709,0,0,1-.71.669h0a0.694,0.694,0,0,1-.7-0.669A3.427,3.427,0,0,0,1644.8,72.106Z"
+                       transform="translate(-1639.97 -70.719)" />
+                   </svg>
+                 </button>
+               </div>
+               <h3 class="products-item__title">Wooden radio</h3>
+               <span class="products-item__price">$29.00</span>
+             </div>
+           </div>
+           <div class="products-item mix category-a all">
+             <div class="products-item__img-box">
+               <img class="products-item__images" src="images/products/3.jpg" alt="Wooden radio">
+               <div class="products-item__link-box">
+                 <a class="products-item__link" href="#">
+                   <svg width="15.28" height="15.281" viewBox="0 0 15.28 15.281">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path id="icon" class="cls-1"
+                       d="M1547.7,72.076a0.617,0.617,0,0,1,.75.485,2.583,2.583,0,0,0,.78,1.489,3.036,3.036,0,0,0,1.49.777,0.636,0.636,0,0,1,.49.743,0.649,0.649,0,0,1-.72.515,4.21,4.21,0,0,1-2.14-1.13,4.164,4.164,0,0,1-1.13-2.136A0.6,0.6,0,0,1,1547.7,72.076ZM1550.98,66a6.267,6.267,0,0,1,6.28,6.257,6.136,6.136,0,0,1-.57,2.6l2.34,2.036c1.7,1.746.74,3.266,0.29,3.717-0.42.454-1.99,1.414-3.73-.292l-2.06-2.35A6.261,6.261,0,1,1,1550.98,66Zm5.55,13.517a1.352,1.352,0,0,0,1.88.226,1.313,1.313,0,0,0-.23-1.874l-2.16-1.88a6.236,6.236,0,0,1-1.37,1.34Zm-5.55-2.312a4.948,4.948,0,1,0-4.97-4.948A4.963,4.963,0,0,0,1550.98,77.2Z"
+                       transform="translate(-1544.72 -66)" />
+                   </svg>
+                 </a>
+                 <a class="products-item__link" href="#">
+                   <svg width="18.94" height="16.969" viewBox="0 0 18.94 16.969">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path class="cls-1"
+                       d="M1721.53,85.978a2.073,2.073,0,1,1,0-4.147h0a2.056,2.056,0,0,1,1.46.6,2.03,2.03,0,0,1,.61,1.466A2.071,2.071,0,0,1,1721.53,85.978Zm0-2.963h0a0.889,0.889,0,1,0,.34,1.71,0.9,0.9,0,0,0,.55-0.824,0.92,0.92,0,0,0-.26-0.629A0.9,0.9,0,0,0,1721.53,83.015Zm8.39,2.963a2.045,2.045,0,0,1-1.46-.607,2.068,2.068,0,0,1,1.46-3.54h0a1.953,1.953,0,0,1,1.47.6,2.085,2.085,0,0,1-.67,3.383A2.093,2.093,0,0,1,1729.92,85.978Zm0-2.963h0a0.978,0.978,0,0,0-.82.548,0.887,0.887,0,0,0,1.16,1.161,0.891,0.891,0,0,0,.29-1.452A0.9,0.9,0,0,0,1729.92,83.015Zm-11.27.164a0.562,0.562,0,0,1-.25-0.056,0.59,0.59,0,0,1-.29-0.787,3.686,3.686,0,0,1,3.05-2.151l-1.05-5.391a0.591,0.591,0,1,1,1.16-.228l1.09,5.578h9.43l1.8-6.771h-13.3a4.346,4.346,0,0,1-4.28-3.693,0.587,0.587,0,0,1,.49-0.673,0.6,0.6,0,0,1,.68.5,3.159,3.159,0,0,0,3.11,2.682h14.07a0.582,0.582,0,0,1,.47.232,0.594,0.594,0,0,1,.11.513l-2.13,7.956a0.59,0.59,0,0,1-.57.44h-10.36a0.03,0.03,0,0,0-.02,0,2.66,2.66,0,0,0-2.68,1.51A0.586,0.586,0,0,1,1718.65,83.178Z"
+                       transform="translate(-1716 -69)" />
+                   </svg>
+                 </a>
+                 <button class="products-item__link">
+                   <svg width="17.87" height="15.531" viewBox="0 0 17.87 15.531">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path class="cls-1"
+                       d="M1648.91,86.245a0.731,0.731,0,0,1-.28-0.056c-0.35-.15-8.65-3.749-8.65-10.76a28.181,28.181,0,0,0,13.05-4.707,4.817,4.817,0,0,1,4.81,4.684c0,7.034-8.29,10.634-8.65,10.783A0.7,0.7,0,0,1,1648.91,86.245Zm-4.11-14.138a3.427,3.427,0,0,0-3.41,3.346c0,5.407,6.13,8.662,7.52,9.334,1.4-.672,7.52-3.93,7.52-9.358a3.406,3.406,0,0,0-6.81.024,0.709,0.709,0,0,1-.71.669h0a0.694,0.694,0,0,1-.7-0.669A3.427,3.427,0,0,0,1644.8,72.106Z"
+                       transform="translate(-1639.97 -70.719)" />
+                   </svg>
+                 </button>
+               </div>
+               <h3 class="products-item__title">Wooden radio</h3>
+               <span class="products-item__price">$29.00</span>
+             </div>
+           </div>
+           <div class="products-item mix category-b category-d all">
+             <div class="products-item__img-box">
+               <img class="products-item__images" src="images/products/4.jpg" alt="Wooden radio">
+               <div class="products-item__link-box">
+                 <a class="products-item__link" href="#">
+                   <svg width="15.28" height="15.281" viewBox="0 0 15.28 15.281">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path id="icon" class="cls-1"
+                       d="M1547.7,72.076a0.617,0.617,0,0,1,.75.485,2.583,2.583,0,0,0,.78,1.489,3.036,3.036,0,0,0,1.49.777,0.636,0.636,0,0,1,.49.743,0.649,0.649,0,0,1-.72.515,4.21,4.21,0,0,1-2.14-1.13,4.164,4.164,0,0,1-1.13-2.136A0.6,0.6,0,0,1,1547.7,72.076ZM1550.98,66a6.267,6.267,0,0,1,6.28,6.257,6.136,6.136,0,0,1-.57,2.6l2.34,2.036c1.7,1.746.74,3.266,0.29,3.717-0.42.454-1.99,1.414-3.73-.292l-2.06-2.35A6.261,6.261,0,1,1,1550.98,66Zm5.55,13.517a1.352,1.352,0,0,0,1.88.226,1.313,1.313,0,0,0-.23-1.874l-2.16-1.88a6.236,6.236,0,0,1-1.37,1.34Zm-5.55-2.312a4.948,4.948,0,1,0-4.97-4.948A4.963,4.963,0,0,0,1550.98,77.2Z"
+                       transform="translate(-1544.72 -66)" />
+                   </svg>
+                 </a>
+                 <a class="products-item__link" href="#">
+                   <svg width="18.94" height="16.969" viewBox="0 0 18.94 16.969">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path class="cls-1"
+                       d="M1721.53,85.978a2.073,2.073,0,1,1,0-4.147h0a2.056,2.056,0,0,1,1.46.6,2.03,2.03,0,0,1,.61,1.466A2.071,2.071,0,0,1,1721.53,85.978Zm0-2.963h0a0.889,0.889,0,1,0,.34,1.71,0.9,0.9,0,0,0,.55-0.824,0.92,0.92,0,0,0-.26-0.629A0.9,0.9,0,0,0,1721.53,83.015Zm8.39,2.963a2.045,2.045,0,0,1-1.46-.607,2.068,2.068,0,0,1,1.46-3.54h0a1.953,1.953,0,0,1,1.47.6,2.085,2.085,0,0,1-.67,3.383A2.093,2.093,0,0,1,1729.92,85.978Zm0-2.963h0a0.978,0.978,0,0,0-.82.548,0.887,0.887,0,0,0,1.16,1.161,0.891,0.891,0,0,0,.29-1.452A0.9,0.9,0,0,0,1729.92,83.015Zm-11.27.164a0.562,0.562,0,0,1-.25-0.056,0.59,0.59,0,0,1-.29-0.787,3.686,3.686,0,0,1,3.05-2.151l-1.05-5.391a0.591,0.591,0,1,1,1.16-.228l1.09,5.578h9.43l1.8-6.771h-13.3a4.346,4.346,0,0,1-4.28-3.693,0.587,0.587,0,0,1,.49-0.673,0.6,0.6,0,0,1,.68.5,3.159,3.159,0,0,0,3.11,2.682h14.07a0.582,0.582,0,0,1,.47.232,0.594,0.594,0,0,1,.11.513l-2.13,7.956a0.59,0.59,0,0,1-.57.44h-10.36a0.03,0.03,0,0,0-.02,0,2.66,2.66,0,0,0-2.68,1.51A0.586,0.586,0,0,1,1718.65,83.178Z"
+                       transform="translate(-1716 -69)" />
+                   </svg>
+                 </a>
+                 <button class="products-item__link">
+                   <svg width="17.87" height="15.531" viewBox="0 0 17.87 15.531">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path class="cls-1"
+                       d="M1648.91,86.245a0.731,0.731,0,0,1-.28-0.056c-0.35-.15-8.65-3.749-8.65-10.76a28.181,28.181,0,0,0,13.05-4.707,4.817,4.817,0,0,1,4.81,4.684c0,7.034-8.29,10.634-8.65,10.783A0.7,0.7,0,0,1,1648.91,86.245Zm-4.11-14.138a3.427,3.427,0,0,0-3.41,3.346c0,5.407,6.13,8.662,7.52,9.334,1.4-.672,7.52-3.93,7.52-9.358a3.406,3.406,0,0,0-6.81.024,0.709,0.709,0,0,1-.71.669h0a0.694,0.694,0,0,1-.7-0.669A3.427,3.427,0,0,0,1644.8,72.106Z"
+                       transform="translate(-1639.97 -70.719)" />
+                   </svg>
+                 </button>
+               </div>
+               <h3 class="products-item__title">Wooden radio</h3>
+               <span class="products-item__price">$29.00</span>
+             </div>
+           </div>
+           <div class="products-item mix category-b all">
+             <div class="products-item__img-box">
+               <img class="products-item__images" src="images/products/5.jpg" alt="Wooden radio">
+               <div class="products-item__link-box">
+                 <a class="products-item__link" href="#">
+                   <svg width="15.28" height="15.281" viewBox="0 0 15.28 15.281">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path id="icon" class="cls-1"
+                       d="M1547.7,72.076a0.617,0.617,0,0,1,.75.485,2.583,2.583,0,0,0,.78,1.489,3.036,3.036,0,0,0,1.49.777,0.636,0.636,0,0,1,.49.743,0.649,0.649,0,0,1-.72.515,4.21,4.21,0,0,1-2.14-1.13,4.164,4.164,0,0,1-1.13-2.136A0.6,0.6,0,0,1,1547.7,72.076ZM1550.98,66a6.267,6.267,0,0,1,6.28,6.257,6.136,6.136,0,0,1-.57,2.6l2.34,2.036c1.7,1.746.74,3.266,0.29,3.717-0.42.454-1.99,1.414-3.73-.292l-2.06-2.35A6.261,6.261,0,1,1,1550.98,66Zm5.55,13.517a1.352,1.352,0,0,0,1.88.226,1.313,1.313,0,0,0-.23-1.874l-2.16-1.88a6.236,6.236,0,0,1-1.37,1.34Zm-5.55-2.312a4.948,4.948,0,1,0-4.97-4.948A4.963,4.963,0,0,0,1550.98,77.2Z"
+                       transform="translate(-1544.72 -66)" />
+                   </svg>
+                 </a>
+                 <a class="products-item__link" href="#">
+                   <svg width="18.94" height="16.969" viewBox="0 0 18.94 16.969">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path class="cls-1"
+                       d="M1721.53,85.978a2.073,2.073,0,1,1,0-4.147h0a2.056,2.056,0,0,1,1.46.6,2.03,2.03,0,0,1,.61,1.466A2.071,2.071,0,0,1,1721.53,85.978Zm0-2.963h0a0.889,0.889,0,1,0,.34,1.71,0.9,0.9,0,0,0,.55-0.824,0.92,0.92,0,0,0-.26-0.629A0.9,0.9,0,0,0,1721.53,83.015Zm8.39,2.963a2.045,2.045,0,0,1-1.46-.607,2.068,2.068,0,0,1,1.46-3.54h0a1.953,1.953,0,0,1,1.47.6,2.085,2.085,0,0,1-.67,3.383A2.093,2.093,0,0,1,1729.92,85.978Zm0-2.963h0a0.978,0.978,0,0,0-.82.548,0.887,0.887,0,0,0,1.16,1.161,0.891,0.891,0,0,0,.29-1.452A0.9,0.9,0,0,0,1729.92,83.015Zm-11.27.164a0.562,0.562,0,0,1-.25-0.056,0.59,0.59,0,0,1-.29-0.787,3.686,3.686,0,0,1,3.05-2.151l-1.05-5.391a0.591,0.591,0,1,1,1.16-.228l1.09,5.578h9.43l1.8-6.771h-13.3a4.346,4.346,0,0,1-4.28-3.693,0.587,0.587,0,0,1,.49-0.673,0.6,0.6,0,0,1,.68.5,3.159,3.159,0,0,0,3.11,2.682h14.07a0.582,0.582,0,0,1,.47.232,0.594,0.594,0,0,1,.11.513l-2.13,7.956a0.59,0.59,0,0,1-.57.44h-10.36a0.03,0.03,0,0,0-.02,0,2.66,2.66,0,0,0-2.68,1.51A0.586,0.586,0,0,1,1718.65,83.178Z"
+                       transform="translate(-1716 -69)" />
+                   </svg>
+                 </a>
+                 <button class="products-item__link">
+                   <svg width="17.87" height="15.531" viewBox="0 0 17.87 15.531">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path class="cls-1"
+                       d="M1648.91,86.245a0.731,0.731,0,0,1-.28-0.056c-0.35-.15-8.65-3.749-8.65-10.76a28.181,28.181,0,0,0,13.05-4.707,4.817,4.817,0,0,1,4.81,4.684c0,7.034-8.29,10.634-8.65,10.783A0.7,0.7,0,0,1,1648.91,86.245Zm-4.11-14.138a3.427,3.427,0,0,0-3.41,3.346c0,5.407,6.13,8.662,7.52,9.334,1.4-.672,7.52-3.93,7.52-9.358a3.406,3.406,0,0,0-6.81.024,0.709,0.709,0,0,1-.71.669h0a0.694,0.694,0,0,1-.7-0.669A3.427,3.427,0,0,0,1644.8,72.106Z"
+                       transform="translate(-1639.97 -70.719)" />
+                   </svg>
+                 </button>
+               </div>
+               <h3 class="products-item__title">Wooden radio</h3>
+               <span class="products-item__price">$29.00</span>
+             </div>
+           </div>
+           <div class="products-item mix category-c category-d all">
+             <div class="products-item__img-box">
+               <img class="products-item__images" src="images/products/6.jpg" alt="Wooden radio">
+               <div class="products-item__link-box">
+                 <a class="products-item__link" href="#">
+                   <svg width="15.28" height="15.281" viewBox="0 0 15.28 15.281">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path id="icon" class="cls-1"
+                       d="M1547.7,72.076a0.617,0.617,0,0,1,.75.485,2.583,2.583,0,0,0,.78,1.489,3.036,3.036,0,0,0,1.49.777,0.636,0.636,0,0,1,.49.743,0.649,0.649,0,0,1-.72.515,4.21,4.21,0,0,1-2.14-1.13,4.164,4.164,0,0,1-1.13-2.136A0.6,0.6,0,0,1,1547.7,72.076ZM1550.98,66a6.267,6.267,0,0,1,6.28,6.257,6.136,6.136,0,0,1-.57,2.6l2.34,2.036c1.7,1.746.74,3.266,0.29,3.717-0.42.454-1.99,1.414-3.73-.292l-2.06-2.35A6.261,6.261,0,1,1,1550.98,66Zm5.55,13.517a1.352,1.352,0,0,0,1.88.226,1.313,1.313,0,0,0-.23-1.874l-2.16-1.88a6.236,6.236,0,0,1-1.37,1.34Zm-5.55-2.312a4.948,4.948,0,1,0-4.97-4.948A4.963,4.963,0,0,0,1550.98,77.2Z"
+                       transform="translate(-1544.72 -66)" />
+                   </svg>
+                 </a>
+                 <a class="products-item__link" href="#">
+                   <svg width="18.94" height="16.969" viewBox="0 0 18.94 16.969">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path class="cls-1"
+                       d="M1721.53,85.978a2.073,2.073,0,1,1,0-4.147h0a2.056,2.056,0,0,1,1.46.6,2.03,2.03,0,0,1,.61,1.466A2.071,2.071,0,0,1,1721.53,85.978Zm0-2.963h0a0.889,0.889,0,1,0,.34,1.71,0.9,0.9,0,0,0,.55-0.824,0.92,0.92,0,0,0-.26-0.629A0.9,0.9,0,0,0,1721.53,83.015Zm8.39,2.963a2.045,2.045,0,0,1-1.46-.607,2.068,2.068,0,0,1,1.46-3.54h0a1.953,1.953,0,0,1,1.47.6,2.085,2.085,0,0,1-.67,3.383A2.093,2.093,0,0,1,1729.92,85.978Zm0-2.963h0a0.978,0.978,0,0,0-.82.548,0.887,0.887,0,0,0,1.16,1.161,0.891,0.891,0,0,0,.29-1.452A0.9,0.9,0,0,0,1729.92,83.015Zm-11.27.164a0.562,0.562,0,0,1-.25-0.056,0.59,0.59,0,0,1-.29-0.787,3.686,3.686,0,0,1,3.05-2.151l-1.05-5.391a0.591,0.591,0,1,1,1.16-.228l1.09,5.578h9.43l1.8-6.771h-13.3a4.346,4.346,0,0,1-4.28-3.693,0.587,0.587,0,0,1,.49-0.673,0.6,0.6,0,0,1,.68.5,3.159,3.159,0,0,0,3.11,2.682h14.07a0.582,0.582,0,0,1,.47.232,0.594,0.594,0,0,1,.11.513l-2.13,7.956a0.59,0.59,0,0,1-.57.44h-10.36a0.03,0.03,0,0,0-.02,0,2.66,2.66,0,0,0-2.68,1.51A0.586,0.586,0,0,1,1718.65,83.178Z"
+                       transform="translate(-1716 -69)" />
+                   </svg>
+                 </a>
+                 <button class="products-item__link">
+                   <svg width="17.87" height="15.531" viewBox="0 0 17.87 15.531">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path class="cls-1"
+                       d="M1648.91,86.245a0.731,0.731,0,0,1-.28-0.056c-0.35-.15-8.65-3.749-8.65-10.76a28.181,28.181,0,0,0,13.05-4.707,4.817,4.817,0,0,1,4.81,4.684c0,7.034-8.29,10.634-8.65,10.783A0.7,0.7,0,0,1,1648.91,86.245Zm-4.11-14.138a3.427,3.427,0,0,0-3.41,3.346c0,5.407,6.13,8.662,7.52,9.334,1.4-.672,7.52-3.93,7.52-9.358a3.406,3.406,0,0,0-6.81.024,0.709,0.709,0,0,1-.71.669h0a0.694,0.694,0,0,1-.7-0.669A3.427,3.427,0,0,0,1644.8,72.106Z"
+                       transform="translate(-1639.97 -70.719)" />
+                   </svg>
+                 </button>
+               </div>
+               <h3 class="products-item__title">Wooden radio</h3>
+               <span class="products-item__price">$29.00</span>
+             </div>
+           </div>
+           <div class="products-item mix category-c category-b all">
+             <div class="products-item__img-box">
+               <img class="products-item__images" src="images/products/7.jpg" alt="Wooden radio">
+               <div class="products-item__link-box">
+                 <a class="products-item__link" href="#">
+                   <svg width="15.28" height="15.281" viewBox="0 0 15.28 15.281">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path id="icon" class="cls-1"
+                       d="M1547.7,72.076a0.617,0.617,0,0,1,.75.485,2.583,2.583,0,0,0,.78,1.489,3.036,3.036,0,0,0,1.49.777,0.636,0.636,0,0,1,.49.743,0.649,0.649,0,0,1-.72.515,4.21,4.21,0,0,1-2.14-1.13,4.164,4.164,0,0,1-1.13-2.136A0.6,0.6,0,0,1,1547.7,72.076ZM1550.98,66a6.267,6.267,0,0,1,6.28,6.257,6.136,6.136,0,0,1-.57,2.6l2.34,2.036c1.7,1.746.74,3.266,0.29,3.717-0.42.454-1.99,1.414-3.73-.292l-2.06-2.35A6.261,6.261,0,1,1,1550.98,66Zm5.55,13.517a1.352,1.352,0,0,0,1.88.226,1.313,1.313,0,0,0-.23-1.874l-2.16-1.88a6.236,6.236,0,0,1-1.37,1.34Zm-5.55-2.312a4.948,4.948,0,1,0-4.97-4.948A4.963,4.963,0,0,0,1550.98,77.2Z"
+                       transform="translate(-1544.72 -66)" />
+                   </svg>
+                 </a>
+                 <a class="products-item__link" href="#">
+                   <svg width="18.94" height="16.969" viewBox="0 0 18.94 16.969">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path class="cls-1"
+                       d="M1721.53,85.978a2.073,2.073,0,1,1,0-4.147h0a2.056,2.056,0,0,1,1.46.6,2.03,2.03,0,0,1,.61,1.466A2.071,2.071,0,0,1,1721.53,85.978Zm0-2.963h0a0.889,0.889,0,1,0,.34,1.71,0.9,0.9,0,0,0,.55-0.824,0.92,0.92,0,0,0-.26-0.629A0.9,0.9,0,0,0,1721.53,83.015Zm8.39,2.963a2.045,2.045,0,0,1-1.46-.607,2.068,2.068,0,0,1,1.46-3.54h0a1.953,1.953,0,0,1,1.47.6,2.085,2.085,0,0,1-.67,3.383A2.093,2.093,0,0,1,1729.92,85.978Zm0-2.963h0a0.978,0.978,0,0,0-.82.548,0.887,0.887,0,0,0,1.16,1.161,0.891,0.891,0,0,0,.29-1.452A0.9,0.9,0,0,0,1729.92,83.015Zm-11.27.164a0.562,0.562,0,0,1-.25-0.056,0.59,0.59,0,0,1-.29-0.787,3.686,3.686,0,0,1,3.05-2.151l-1.05-5.391a0.591,0.591,0,1,1,1.16-.228l1.09,5.578h9.43l1.8-6.771h-13.3a4.346,4.346,0,0,1-4.28-3.693,0.587,0.587,0,0,1,.49-0.673,0.6,0.6,0,0,1,.68.5,3.159,3.159,0,0,0,3.11,2.682h14.07a0.582,0.582,0,0,1,.47.232,0.594,0.594,0,0,1,.11.513l-2.13,7.956a0.59,0.59,0,0,1-.57.44h-10.36a0.03,0.03,0,0,0-.02,0,2.66,2.66,0,0,0-2.68,1.51A0.586,0.586,0,0,1,1718.65,83.178Z"
+                       transform="translate(-1716 -69)" />
+                   </svg>
+                 </a>
+                 <button class="products-item__link">
+                   <svg width="17.87" height="15.531" viewBox="0 0 17.87 15.531">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path class="cls-1"
+                       d="M1648.91,86.245a0.731,0.731,0,0,1-.28-0.056c-0.35-.15-8.65-3.749-8.65-10.76a28.181,28.181,0,0,0,13.05-4.707,4.817,4.817,0,0,1,4.81,4.684c0,7.034-8.29,10.634-8.65,10.783A0.7,0.7,0,0,1,1648.91,86.245Zm-4.11-14.138a3.427,3.427,0,0,0-3.41,3.346c0,5.407,6.13,8.662,7.52,9.334,1.4-.672,7.52-3.93,7.52-9.358a3.406,3.406,0,0,0-6.81.024,0.709,0.709,0,0,1-.71.669h0a0.694,0.694,0,0,1-.7-0.669A3.427,3.427,0,0,0,1644.8,72.106Z"
+                       transform="translate(-1639.97 -70.719)" />
+                   </svg>
+                 </button>
+               </div>
+               <h3 class="products-item__title">Wooden radio</h3>
+               <span class="products-item__price">$29.00</span>
+             </div>
+           </div>
+           <div class="products-item mix category-c category-d all">
+             <div class="products-item__img-box">
+               <img class="products-item__images" src="images/products/8.jpg" alt="Wooden radio">
+               <div class="products-item__link-box">
+                 <a class="products-item__link" href="#">
+                   <svg width="15.28" height="15.281" viewBox="0 0 15.28 15.281">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path id="icon" class="cls-1"
+                       d="M1547.7,72.076a0.617,0.617,0,0,1,.75.485,2.583,2.583,0,0,0,.78,1.489,3.036,3.036,0,0,0,1.49.777,0.636,0.636,0,0,1,.49.743,0.649,0.649,0,0,1-.72.515,4.21,4.21,0,0,1-2.14-1.13,4.164,4.164,0,0,1-1.13-2.136A0.6,0.6,0,0,1,1547.7,72.076ZM1550.98,66a6.267,6.267,0,0,1,6.28,6.257,6.136,6.136,0,0,1-.57,2.6l2.34,2.036c1.7,1.746.74,3.266,0.29,3.717-0.42.454-1.99,1.414-3.73-.292l-2.06-2.35A6.261,6.261,0,1,1,1550.98,66Zm5.55,13.517a1.352,1.352,0,0,0,1.88.226,1.313,1.313,0,0,0-.23-1.874l-2.16-1.88a6.236,6.236,0,0,1-1.37,1.34Zm-5.55-2.312a4.948,4.948,0,1,0-4.97-4.948A4.963,4.963,0,0,0,1550.98,77.2Z"
+                       transform="translate(-1544.72 -66)" />
+                   </svg>
+                 </a>
+                 <a class="products-item__link" href="#">
+                   <svg width="18.94" height="16.969" viewBox="0 0 18.94 16.969">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path class="cls-1"
+                       d="M1721.53,85.978a2.073,2.073,0,1,1,0-4.147h0a2.056,2.056,0,0,1,1.46.6,2.03,2.03,0,0,1,.61,1.466A2.071,2.071,0,0,1,1721.53,85.978Zm0-2.963h0a0.889,0.889,0,1,0,.34,1.71,0.9,0.9,0,0,0,.55-0.824,0.92,0.92,0,0,0-.26-0.629A0.9,0.9,0,0,0,1721.53,83.015Zm8.39,2.963a2.045,2.045,0,0,1-1.46-.607,2.068,2.068,0,0,1,1.46-3.54h0a1.953,1.953,0,0,1,1.47.6,2.085,2.085,0,0,1-.67,3.383A2.093,2.093,0,0,1,1729.92,85.978Zm0-2.963h0a0.978,0.978,0,0,0-.82.548,0.887,0.887,0,0,0,1.16,1.161,0.891,0.891,0,0,0,.29-1.452A0.9,0.9,0,0,0,1729.92,83.015Zm-11.27.164a0.562,0.562,0,0,1-.25-0.056,0.59,0.59,0,0,1-.29-0.787,3.686,3.686,0,0,1,3.05-2.151l-1.05-5.391a0.591,0.591,0,1,1,1.16-.228l1.09,5.578h9.43l1.8-6.771h-13.3a4.346,4.346,0,0,1-4.28-3.693,0.587,0.587,0,0,1,.49-0.673,0.6,0.6,0,0,1,.68.5,3.159,3.159,0,0,0,3.11,2.682h14.07a0.582,0.582,0,0,1,.47.232,0.594,0.594,0,0,1,.11.513l-2.13,7.956a0.59,0.59,0,0,1-.57.44h-10.36a0.03,0.03,0,0,0-.02,0,2.66,2.66,0,0,0-2.68,1.51A0.586,0.586,0,0,1,1718.65,83.178Z"
+                       transform="translate(-1716 -69)" />
+                   </svg>
+                 </a>
+                 <button class="products-item__link">
+                   <svg width="17.87" height="15.531" viewBox="0 0 17.87 15.531">
+                     <defs>
+                       <style>
+                         .cls-1 {
+                           fill: #243f4d;
+                           fill-rule: evenodd;
+                         }
+                       </style>
+                     </defs>
+                     <path class="cls-1"
+                       d="M1648.91,86.245a0.731,0.731,0,0,1-.28-0.056c-0.35-.15-8.65-3.749-8.65-10.76a28.181,28.181,0,0,0,13.05-4.707,4.817,4.817,0,0,1,4.81,4.684c0,7.034-8.29,10.634-8.65,10.783A0.7,0.7,0,0,1,1648.91,86.245Zm-4.11-14.138a3.427,3.427,0,0,0-3.41,3.346c0,5.407,6.13,8.662,7.52,9.334,1.4-.672,7.52-3.93,7.52-9.358a3.406,3.406,0,0,0-6.81.024,0.709,0.709,0,0,1-.71.669h0a0.694,0.694,0,0,1-.7-0.669A3.427,3.427,0,0,0,1644.8,72.106Z"
+                       transform="translate(-1639.97 -70.719)" />
+                   </svg>
+                 </button>
+               </div>
+               <h3 class="products-item__title">Wooden radio</h3>
+               <span class="products-item__price">$29.00</span>
+             </div>
+           </div>
         </div>
       </div>
     </section>
 
   </main>
 
-
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
         <address class="footer-top__address">
           <div class="logo footer-top__logo">
-            <span class="sr-only">Logo</span>
             <a class="logo__link" href="#">
-              <img class="logo__img" src="images/logo.svg" alt="logo">
-              <h1 class="logo__title">Glee.</h1>
+              <span class="sr-only">Logo</span>
+              <svg class="logo__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="146" height="39" viewBox="0 0 146 39">
+                <image id="Glee." width="146" height="39"
+                  xlink:href="data:img/png;base64,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" />
+              </svg>
             </a>
           </div>
-          <div class="address">
-            <a class="address__item" href="#">
-              ADDRESS: 4772 Wines Lane Houston, TX 77032
-            </a>
-            <a class="address__item" href="tel:8323475843">
-              Telephone: +832-347-5843
-            </a>
-            <a class="address__item" href="mailto:contact@Glee.com">
-              Email: contact@Glee.com
-            </a>
-          </div>
+          <ul class="address">
+            <li class="address__item">
+              <span class="address__text">Address:</span>
+              <a class="address__link" href="#">
+                4772 Wines Lane Houston, TX 77032
+              </a>
+            </li>
+            <li class="address__item">
+              <span class="address__text">Telephone:</span>
+              <a class="address__link" href="tel:8323475843">
+                +832-347-5843
+              </a>
+            </li>
+            <li class="address__item">
+              <span class="address__text">Email:</span>
+              <a class="address__link" href="mailto:contact@Glee.com">
+                contact@Glee.com
+              </a>
+            </li>
+          </ul>
         </address>
         <div class="footer-top__item">
-          <h2 class="footer-top__title">Services</h2>
+          <h3 class="footer-top__title">Services</h3>
 
           <ul class="footer-top__list">
             <li class="footer-top__list-item">
@@ -267,7 +724,7 @@
           </ul>
         </div>
         <div class="footer-top__item">
-          <h2 class="footer-top__title">Account</h2>
+          <h3 class="footer-top__title">Account</h3>
 
           <ul class="footer-top__list">
             <li class="footer-top__list-item">
@@ -293,23 +750,25 @@
           </ul>
         </div>
         <div class="footer-top__item">
-          <h2 class="footer-top__title">Newsletter</h2>
-
-          <p class="footer-top__item-text">
-            Subscribe by our newsletter and get
-            update protidin.
-          </p>
-          <form class="footer-top__form">
-            <input class="footer-top__input" type="text" placeholder="Email address" required>
-            <button class="footer-top__btn">Subscribe</button>
+          <h3 class="footer-top__title">Newsletter</h3>
+          <div class="footer-top__item-text">
+            <p>
+              Subscribe by our newsletter and get
+              update protidin.
+            </p>
+          </div>
+          <form class="footer-top__form" action="#" method="POST">
+            <label class="sr-form" for="form__email">enter your email</label>
+            <input class="footer-top__input" type="email" placeholder="Email address" required>
+            <button class="footer-top__btn" type="submit">Subscribe</button>
           </form>
         </div>
       </div>
       <div class="footer-bottom">
         <div class="footer-bottom__copy">
-          ©2020 CopyRight Example. All rights reserved.
+          <p>©2020 CopyRight Example. All rights reserved.</p>
         </div>
-        <div class="footer-bottom__nav">
+        <nav class="footer-bottom__nav">
           <ul class="footer-bottom__list">
             <li class="footer-bottom__item">
               <a class="footer-bottom__link" href="#">Home</a>
@@ -324,7 +783,7 @@
               <a class="footer-bottom__link" href="#">Contact</a>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
     </div>
   </footer>

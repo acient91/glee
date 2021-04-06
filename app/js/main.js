@@ -9,5 +9,5 @@ $(function(){
 
 
 
-  var mixer = mixitup('.products__inner');
+  var mixer = mixitup('.products__items');
 });
