@@ -1,5 +1,5 @@
 .products {
-  padding: 75px 0 120px;
+  padding: 75px 0 100px;
 
   &__title {
     @extend %DMSans-700;
@@ -13,11 +13,12 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px;
+    margin-bottom: 120px;
   }
 }
 
 .products-item {
-  &__img-box {    
+  &__img-box {
     font-size: 16px;
     line-height: 2;
     max-width: 270px;
@@ -25,10 +26,10 @@
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     position: relative;
     text-align: center;
-    overflow: hidden; 
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;       
+    justify-content: flex-end;
   }
 
   &__images {
@@ -49,10 +50,10 @@
   &__link {
     width: 45px;
     height: 45px;
-    background-color: #fff;   
+    background-color: #fff;
     border-radius: 50%;
-    text-align: center;  
-    line-height: 3;  
+    text-align: center;
+    line-height: 3;
     transition: all .3s ease;
 
     path {
@@ -61,9 +62,10 @@
 
     &:hover {
       background-color: $accent;
-       path {
-         fill: #fff;
-       }
+
+      path {
+        fill: #fff;
+      }
     }
   }
 
@@ -84,7 +86,7 @@
     display: block;
     margin-bottom: 35px;
   }
-  
+
   &:hover {
     .products-item__link-box {
       transform: translateX(0);
@@ -116,3 +118,74 @@
 .mixitup-control-active {
   color: #191919;
 }
+
+.lamp {
+
+  &__inner {
+    display: flex;
+  }
+
+  &__items {
+    background-color: #feefe2;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 80px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__images {
+    margin-top: -85px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;    
+    color: $title;
+  }
+  
+  &__title {
+    @extend %DMSans-700;
+    font-size: 26px;    
+    max-width: 270px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    max-width: 390px;
+    @extend %Rubik-400;
+    margin-bottom: 35px;
+    line-height: 2;
+  }
+
+  &__link {
+    max-width: 180px;
+    padding: 25px 20px;
+    border: 1px solid #b3b7b5;
+    border-radius: 4px;
+    @extend %Rubik-500;
+    font-size: 15px;
+    color: $default;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 10px;
+      background-image: url('../images/arrow-link-right.svg');
+      right: 20px;
+      top: 28px;      
+    }
+
+    
+
+    
+  }
+
+}
+
