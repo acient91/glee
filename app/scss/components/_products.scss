@@ -1,12 +1,8 @@
 .products {
   padding: 75px 0 100px;
 
-  &__title {
-    @extend %DMSans-700;
-    color: #191919;
-    font-size: 36px;
-    margin-bottom: 35px;
-    text-align: center;
+  &__title {    
+    margin-bottom: 35px;   
   }
 
   &__items {
@@ -97,7 +93,7 @@
 .filter {
   display: flex;
   justify-content: center;
-  margin-bottom: 110px;
+  margin-bottom: 80px;
 
   &__list:not(:last-child) {
     margin-right: 30px;
@@ -180,12 +176,7 @@
       background-image: url('../images/arrow-link-right.svg');
       right: 20px;
       top: 28px;      
-    }
-
-    
-
-    
+    }    
   }
-
 }
 
