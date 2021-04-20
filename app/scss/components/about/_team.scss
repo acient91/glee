@@ -1,0 +1,92 @@
+.team {
+  padding-bottom: 120px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    max-width: 310px;
+    color: $title;
+    line-height: 2;
+    margin-bottom: 35px;
+  }
+
+  &__link {
+    padding: 20px 60px 20px 20px;
+    color: #fff;
+    background-color: $accent;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;    
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url('../images/about/arrow-btn.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 15px;
+      min-height: 11px;
+      top: 22px;
+      right: 25px;
+    }    
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px 30px;
+  }
+
+  &__image {
+    max-width: 370px;
+    min-height: 320px;
+    position: relative;
+    z-index: -1;
+  }
+
+  &__item {
+    max-width: 325px;
+    min-height: 110px;
+    width: 100%;
+    background-color: #fff;
+    margin-top: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__name-link {
+    display: flex;
+    flex-direction: column;    
+  }
+
+  &__name {
+    @extend %DMSans-700;
+    font-size: 22px;
+    color: $default;
+    margin-bottom: 12px;
+  }
+
+  &__profession {    
+    line-height: 2;
+    color: #565872;
+  }
+
+  &__item-links {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link-instagram {
+    margin-right: 30px;
+  }  
+}
