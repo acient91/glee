@@ -1,5 +1,5 @@
 $(function(){
-  $('.top-slider__inner').slick({
+  $('.slider__inner').slick({
     dots: true,
     arrows: false,
     fade: true,
@@ -9,16 +9,34 @@ $(function(){
 
   $('.partners__item').slick({
     dots: false,
-    arrows: false,
-    fade: true,
+    arrows: false,    
     autoplay: true,
     autoplaySpead: 2000,
-    slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToShow: 4,
+    slidesToScroll: 1,
   });
 
 
+  const mixin1 = document.querySelector('.products__items');
+  const mixin2 = document.querySelector('.design__items');
 
-  var mixer = mixitup('.products__items');
-  var mixer = mixitup('.design__items');
+  if (mixin1) {
+    mixitup('.products__items', {
+      selectors: {
+        control: '.mixitup'
+      }
+    })
+  }
+
+  if (mixin2) {
+    mixitup('.design__items', {
+      selectors: {
+        control: '.mixitup2'
+      }
+    })
+  }
+
+
+  // var mixer = mixitup('.products__items');
+  // var mixer = mixitup('.design__items');
 });

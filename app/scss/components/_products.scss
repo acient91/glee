@@ -29,18 +29,23 @@
   }
 
   &__images {
-    display: block;
-    margin: 0 auto 75px;
-    object-fit: cover;
+    max-width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    margin-bottom: 60px;
   }
 
   &__link-box {
     position: absolute;
     top: 150px;
     display: flex;
-    margin-left: 50px;
-    transform: translateX(-300%);
-    transition: transform .3s ease;
+    margin-left: 50px;   
+    opacity: 0; 
+    transition: opacity .3s ease;
   }
 
   &__link {
@@ -85,7 +90,7 @@
 
   &:hover {
     .products-item__link-box {
-      transform: translateX(0);
+      opacity: 1;
     }
   }
 }
@@ -135,6 +140,7 @@
 
   &__images {
     margin-top: -85px;
+    object-fit: cover;
   }
 
   &__item {

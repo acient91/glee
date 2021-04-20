@@ -1,0 +1,14 @@
+.top {
+  &__inner {
+    padding: 35px 0;
+    background-color: #edf1f4;
+    text-align: center;
+  }
+
+  &__title {
+    @extend %Rubik-400;
+    font-size: 36px;
+    color: #222933;
+    margin-bottom: 15px;
+  }  
+}
