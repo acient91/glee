@@ -29,6 +29,14 @@ $(function(){
     },
   });
 
+  $(".filter-recent__star").rateYo({
+    starWidth: "11px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    spacing: "6px",
+    readOnly: true,
+  });
+
 
   const mixin1 = document.querySelector('.products__items');
   const mixin2 = document.querySelector('.design__items');
