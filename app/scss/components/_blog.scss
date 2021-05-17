@@ -35,6 +35,18 @@
 
   &__item {
     max-width: 370px;
+    position: relative;
+
+    &::before {
+      content: 'NEWS';
+      position: absolute;
+      padding: 7px 30px;
+      background-color: $accent;
+      border-radius: 15px;
+      color: #fff;
+      top: 235px;
+      left: 30px;
+    }
   }
 
   &__item-inner {

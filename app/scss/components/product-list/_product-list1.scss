@@ -1,4 +1,4 @@
-.product {
+.shop {
   padding: 120px 0;
 
   &__inner {
@@ -18,18 +18,18 @@
   font-size: 18px;
   text-align: left;
   margin-bottom: 30px;
-  padding-right: 50px;
-  position: relative;
-  max-width: 230px;
+  padding-right: 15px;
+  position: relative;  
+  display: inline-block;
 
-  &::before {
+  &::after {
     content: '';
     position: absolute;
     width: 38px;
     height: 3px;
-    background-color: $accent;
-    right: 115px;
+    background-color: $accent;  
     top: 6px;
+    margin-left: 15px;
   }
 }
 
@@ -177,4 +177,71 @@
   &__sum {
     font-size: 15px;
   }
+}
+
+.shop-content {
+  width: 100%;
+  &__filter{
+    padding: 20px 25px 20px 30px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__filter-buttons {
+    display: flex;
+    align-items: center;
+  }
+  &__filter-text{
+    margin-right: 15px;
+  }
+  &__filter-btn {
+    margin-right: 15px;
+    line-height: 0;
+    &.shop-content__filter-btn--active {
+      path {
+        fill: $accent;
+      }
+    }
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+    .products-item {
+      margin-bottom: 40px;
+    }
+  }
+  &__items {    
+  }
+}
+
+.jq-selectbox__select {
+  margin-right: 30px;
+  height: 32px;
+  padding: 0 30px 0 0;
+  border: none;  
+  @extend %Rubik-400;
+  color: $default;
+  background: transparent;
+  box-shadow: none;
+  text-shadow: none;  
+  &:hover {
+    background: transparent;
+  }
+}
+
+.jq-selectbox__trigger {  
+  border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  width: 10px;
+  height: 5px;
+  border: none;
+  background-image: url('../images/icons/angle-down.svg');
 }

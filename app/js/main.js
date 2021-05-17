@@ -1,4 +1,18 @@
 $(function(){
+
+  $('.shop-content__filter-btn').on('click', function () {
+    $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
+    $(this).addClass('shop-content__filter-btn--active')
+  });
+
+  $('.buttons-list').on('click', function () {
+    $('.products-item').addClass('products-item--list');
+  });
+
+  $('.buttons-grid').on('click', function () {
+    $('.products-item').removeClass('products-item--list');
+  });
+
   $('.slider__inner').slick({
     dots: true,
     arrows: false,
@@ -36,6 +50,16 @@ $(function(){
     spacing: "6px",
     readOnly: true,
   });
+
+  $(".products-item__star").rateYo({
+    starWidth: "11px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    spacing: "6px",
+    readOnly: true,
+  });
+
+  $(".select__style").styler()
 
 
   const mixin1 = document.querySelector('.products__items');
