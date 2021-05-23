@@ -85,6 +85,7 @@ img {
 
     &:last-child {
       color: $accent;
+      padding-right: 0;
 
       &::before {
         display: none;

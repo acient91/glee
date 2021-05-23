@@ -1,5 +1,5 @@
 .blog {
-  padding-bottom: 80px;  
+  padding-bottom: 70px;  
 
   &__top {
     display: flex;
@@ -107,9 +107,14 @@
     z-index: 999;
   }
 
-  &__item {
+  &__list {
     display: flex;
     justify-content: space-evenly;
     align-items: center;    
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
   }
 } 

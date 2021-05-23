@@ -1,11 +1,10 @@
 .blog-details {
+  padding: 120px 0 70px;
 
   .partners__inner {
     margin-top: 0;
     padding: 80px 0 90px;
   }
-
-  padding-top: 120px;
 
   &__title,
   &__sub-title {
@@ -78,48 +77,6 @@
 
   &__content-img {
     width: 100%;
-  }
-
-  &__content-box {
-    display: flex;
-    justify-content: space-between;
-    width: 275px;
-    padding: 23px 30px 23px 23px;
-    background-color: $accent;
-    color: #fff;
-    @extend %Rubik-400;
-    font-size: 12px;
-    line-height: 2;
-    text-transform: uppercase;
-    margin-top: -70px;
-    position: relative;
-    z-index: 2;
-  }
-
-  &__content-date,
-  &__content-author {
-    padding-left: 25px;
-    display: block;
-    position: relative;
-  }
-
-  &__content-date::before,
-  &__content-author::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 3px;
-    width: 16px;
-    height: 16px;
-    background-repeat: no-repeat;
-  }
-
-  &__content-date::before {
-    background-image: url('../images/icons/calendar-white.svg');
-  }
-
-  &__content-author::before {
-    background-image: url('../images/icons/user.svg');
   }
 
   &__author {
@@ -272,6 +229,48 @@
   }
 }
 
+.blog-box {
+  display: flex;
+  justify-content: space-between;
+  width: 275px;
+  padding: 23px 30px 23px 23px;
+  background-color: $accent;
+  color: #fff;
+  @extend %Rubik-400;
+  font-size: 12px;
+  line-height: 2;
+  text-transform: uppercase;
+  margin-top: -70px;
+  position: relative;
+  z-index: 2;
+
+  &__date,
+  &__author {
+    padding-left: 25px;
+    display: block;
+    position: relative;
+  }
+
+  &__date::before,
+  &__author::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+  }
+
+  &__date::before {
+    background-image: url('../images/icons/calendar-white.svg');
+  }
+
+  &__author::before {
+    background-image: url('../images/icons/user.svg');
+  }
+}
+
 .comment {
   padding: 65px 0 60px;
   border-top: 2px solid #ebebeb;
@@ -403,6 +402,7 @@
 
   &__label-name {
     position: relative;
+
     &::before {
       content: '';
       position: absolute;
@@ -438,10 +438,10 @@
     border: 1px solid #e5e5e5;
     outline-color: $accent;
     margin-bottom: 20px;
-    
+
     &::placeholder {
       color: #999999;
-    @extend %Rubik-400;
+      @extend %Rubik-400;
     }
   }
 
@@ -453,6 +453,7 @@
     padding: 20px 50px 20px 20px;
     outline-color: $accent;
     margin-bottom: 40px;
+
     &::placeholder {
       color: #999999;
       @extend %Rubik-400;

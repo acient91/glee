@@ -21,7 +21,7 @@ $(function(){
     autoplaySpead: 2000
   });
 
-  $('.partners__item').slick({
+  $('.partners__list').slick({
     dots: false,
     arrows: false,    
     autoplay: true,
