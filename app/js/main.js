@@ -60,6 +60,7 @@ $(function(){
   });
 
   $(".select__style").styler()
+  
 
 
   const mixin1 = document.querySelector('.products__items');
