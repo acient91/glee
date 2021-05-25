@@ -1,0 +1,38 @@
+.terms {
+  padding: 120px 0;
+ 
+
+  &__title {
+    font-size: 24px;
+    color: $title;
+    margin-bottom: 30px;
+  }
+  &__list {    
+    list-style-type: decimal-leading-zero;
+    list-style-position: outside;    
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    color: $title;
+    @extend %Rubik-400;
+    line-height: 2;
+    margin-left: 30px;   
+    &:last-child {
+      margin-bottom: 75px;
+    }
+  }
+
+  &__subtitle{
+    font-size: 24px;
+    color: $title;
+    line-height: 2;
+    margin-bottom: 30px;
+  }
+  &__text{
+    @extend %Rubik-400;
+    color: $title;
+    line-height: 2;
+    margin-bottom: 30px;
+  }
+}
