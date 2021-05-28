@@ -1,0 +1,268 @@
+.product-page {
+  padding: 120px 0;
+}
+
+.product-one {
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 75px;
+  }
+
+  &__slide {
+    width: 550px;
+    margin-right: 70px;
+  }
+
+  &__content {
+    width: 550px;
+  }
+
+  &__title {
+    @extend %Rubik-400;
+    color: #333333;
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+
+  &__star {
+    margin-bottom: 40px;
+  }
+
+  &__price {
+    @extend %Rubik-400;
+    color: #333333;
+    font-size: 30px;
+    margin-bottom: 35px;
+    display: block;
+  }
+
+  &__text {
+    width: 610px;
+    @extend %Rubik-400;
+    line-height: 2;
+    color: $title;
+    margin-bottom: 15px;
+  }
+
+  &__box {
+    display: flex;
+    margin-bottom: 60px;
+  }
+
+  &__input {
+    margin-right: 15px;
+  }
+
+  &__btn {
+    padding: 9px 54px;
+    background-color: $accent;
+    border-radius: 4px;
+    color: #fff;
+    text-transform: uppercase;
+    @extend %Rubik-400;
+    line-height: 2;
+    transition: all .3s ease-in;
+
+    &:hover {
+      background-color: $main;
+      color: $accent;
+    }
+  }
+
+  &__list {
+    @extend %Rubik-400;
+    color: $title;
+    line-height: 2;
+  }
+
+  &__tabs{
+    margin-bottom: 120px;
+  }
+  &__tabs-top {   
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+  &__tabs-link {
+    max-width: 240px;
+    min-height: 55px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #edf1f4;
+    color: $title;
+    font-size: 18px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & + .product-one__tabs-link {
+      margin-left: 13px;
+    }
+  }
+  &__tabs-link--active {
+    color: #fff;
+    background-color: $accent;
+  }
+
+  &__tabs-text {
+    display: none;
+    @extend %Rubik-400;
+    line-height: 2;
+    color: $title;
+  }
+  &__tabs-text--active{
+    display: block;
+  }
+
+  &__related-top {
+    position: relative;    
+  }
+
+  &__related-title {
+    font-size: 35px;
+    color: $title;
+    @extend %DMSans-700;
+    margin-bottom: 70px;
+  }
+}
+
+.slick-slider {
+  position: static;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border: 2px solid $accent;
+  border-radius: 4px;
+}
+
+.slick-prev {
+  margin-right: 70px;
+}
+
+.slick-disabled {
+  border-color: #edf1f4;
+}
+
+.product-slide {
+  display: flex;
+
+  &__small {
+    width: 140px;
+    margin-right: 25px;
+  }
+
+  &__small-item {
+    width: 140px;
+    height: 160px;
+    border: 2px solid #f2f2f2;
+    margin-bottom: 20px;
+
+    img {
+      width: 140px;
+      height: 156px;
+      object-fit: contain;
+    }    
+  }
+
+  &__big {
+    width: 390px;
+  }
+
+  &__big-item {
+    width: 390px;
+    height: 530px;
+    border: 2px solid #f2f2f2;
+
+    img {
+      width: 390px;
+      height: 526px;
+    }
+  }
+}
+
+.jq-number {
+  position: relative;
+  padding: 0;
+}
+
+.jq-number__field {
+  width: 150px;
+  height: 50px;
+  border: 1px solid $accent;
+  border-bottom-color: $accent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.jq-number__field input {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  outline: none;
+  background: none;
+  @extend %Rubik-400;
+  font-size: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.jq-number__spin {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid $accent;
+  border-bottom-color: $accent;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  user-select: none;
+  text-shadow: none;
+  cursor: pointer;
+  transition: all .3s ease-in;
+}
+
+.jq-number__spin:hover {
+  background-color: $main;
+
+}
+
+.jq-number__spin::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 21px;
+  width: 7px;
+  height: 1px;
+  background-color: #333;
+}
+
+.jq-number__spin.plus::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 24px;
+  width: 1px;
+  height: 8px;
+  background-color: #333;
+}
+
+.jq-number__spin.minus {
+  top: 0;
+  left: 0;
+
+}
+
+.jq-number__spin.plus {
+  top: 0;
+  right: 0;
+}
