@@ -4,22 +4,116 @@
   align-items: center;
 }
 
+.logo__link {
+  z-index: 2;
+
+  @include for-590-px {
+    margin-right: 50px;
+  }
+}
+
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 
+  @include for-590-px {
+    flex-direction: column;
+    height: 168px;
+    margin-top: 50px;
+  }
+
+
+  &__btn {
+    display: none;
+
+    @include for-1080-px {
+      position: relative;
+      width: 30px;
+      height: 25px;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      order: 1;
+      z-index: 2;
+
+      span {
+        width: 100%;
+        height: 3px;
+        background-color: $accent;
+      }
+
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: $accent;
+      }
+
+      &::after {
+        top: 0;
+      }
+
+      &::before {
+        bottom: 0;
+      }
+    }
+  }
+
   &__list {
     display: flex;
+
+    @include for-1080-px {
+      position: absolute;
+      left: 0;
+      right: 0;
+      transform: translateY(-200px);
+      transition: transform .3s ease;
+    }
+  }
+
+  &__list--active {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: $main;
+    color: $accent;
+    top: 0;
+    transform: translateY(0);
+    transition: transform .3s ease;
+    overflow: hidden;
+
+    body {
+      overflow: hidden;
+    }
   }
 
   &__item {
     font-size: 15px;
+
+    @include for-1080-px {
+      margin-right: 0;
+      font-size: 20px;
+    }
   }
 
   &__item:not(:last-child) {
     margin-right: 35px;
+
+    @include for-1080-px {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
   }
 
   &__link {
@@ -36,6 +130,16 @@
 .user-nav {
   display: flex;
 
+  @include for-1080-px {
+    margin-right: 50px;
+    margin-left: auto;
+    z-index: -1;
+  }
+
+  @include for-590-px {
+    margin: 0;
+  }
+
   &__link-search,
   &__link-menu {
     width: 50px;
@@ -45,10 +149,11 @@
     text-align: center;
     position: relative;
     transition: background-color .3s ease;
+
     path {
       transition: fill .3s ease;
     }
-  }  
+  }
 
   &__link-search,
   &__link {
@@ -58,8 +163,9 @@
   &__link-search:hover,
   &__link-menu:hover,
   &__link-heart:hover,
-  &__link-cart:hover {    
+  &__link-cart:hover {
     background-color: #fcd7b6;
+
     path {
       fill: #fff;
     }
