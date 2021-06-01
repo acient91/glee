@@ -1,14 +1,37 @@
 .team {
   padding-bottom: 120px;
 
+  @include for-590-px {
+    padding: 60px 0;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include for-1200-px {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
+
+  &__info {
+    @include for-1200-px {
+      margin-bottom: 30px;
+      max-width: 770px;
+      width: 100%
+    }
+  }
+
 
   &__title {
     text-align: left;
     margin-bottom: 35px;
+
+    @include for-1200-px {
+      text-align: center;
+    }
   }
 
   &__text {
@@ -16,6 +39,10 @@
     color: $title;
     line-height: 2;
     margin-bottom: 35px;
+
+    @include for-1200-px {
+      max-width: 100%;
+    }
   }
 
   &__link {
@@ -24,7 +51,7 @@
     background-color: $accent;
     border-radius: 5px;
     display: inline-block;
-    position: relative;    
+    position: relative;
 
     &::before {
       content: "";
@@ -37,13 +64,18 @@
       min-height: 11px;
       top: 22px;
       right: 25px;
-    }    
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 100px 30px;
+
+    @include for-850-px {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 30px;
+    }
   }
 
   &__image {
@@ -51,6 +83,11 @@
     min-height: 320px;
     position: relative;
     z-index: -1;
+
+    @include for-590-px {
+      max-width: 280px;
+      min-height: 220px;
+    }
   }
 
   &__item {
@@ -66,7 +103,7 @@
 
   &__name-link {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
   }
 
   &__name {
@@ -76,7 +113,7 @@
     margin-bottom: 12px;
   }
 
-  &__profession {    
+  &__profession {
     line-height: 2;
     color: #565872;
   }
@@ -88,5 +125,5 @@
 
   &__link-instagram {
     margin-right: 30px;
-  }  
+  }
 }
