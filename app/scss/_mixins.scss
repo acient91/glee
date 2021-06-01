@@ -1,8 +1,8 @@
-@mixin for-phone-only {
-  @media (max-width: 599px) {
-    @content;
-  }
-}
+// @mixin for-phone-only {
+//   @media (max-width: 599px) {
+//     @content;
+//   }
+// }
 
 @mixin for-590-px {
   @media (max-width: 590px) {
@@ -10,8 +10,14 @@
   }
 }
 
-@mixin for-tablet-landscape-up {
-  @media (min-width: 900px) {
+@mixin for-790-px {
+  @media (max-width: 790px) {
+    @content;
+  }
+}
+
+@mixin for-850-px {
+  @media (max-width: 850px) {
     @content;
   }
 }
@@ -22,8 +28,8 @@
   }
 }
 
-@mixin for-big-desktop-up {
-  @media (min-width: 1800px) {
+@mixin for-1200-px {
+  @media (max-width: 1200px) {
     @content;
   }
 }

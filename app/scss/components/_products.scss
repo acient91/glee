@@ -1,8 +1,16 @@
 .products {
   padding: 75px 0 100px;
 
+  @include for-590-px {
+    padding: 50px 0;
+  }
+
   &__title {
     margin-bottom: 35px;
+
+    @include for-590-px {
+      font-size: 30px;
+    }
   }
 
   &__items {
@@ -10,11 +18,28 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px 30px;
     margin-bottom: 120px;
+
+    @include for-1080-px {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    @include for-850-px {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-590-px {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
 
 .products-item {
   max-width: 270px;
+
+  @include for-590-px {
+    max-width: 100%;
+  }
 
   &.products-item--list {
     min-width: 100%;
@@ -48,18 +73,18 @@
     }
 
     .products-item__wrapper-box {
-      padding: 85px 60px 75px;          
+      padding: 85px 60px 75px;
     }
 
     .products-item__box {
       display: flex;
-    flex-direction: column;
+      flex-direction: column;
     }
-    
+
     .products-item__title {
       font-size: 40px;
       @extend %Rubik-400;
-      color: #333333;           
+      color: #333333;
     }
 
     .products-item__price {
@@ -72,7 +97,7 @@
     }
 
     .products-item__text {
-      @extend %Rubik-400;      
+      @extend %Rubik-400;
       line-height: 2;
       color: $title;
       margin-bottom: 40px;
@@ -84,13 +109,15 @@
       background-color: transparent;
       line-height: 0;
       transition: all .3s ease;
+
       &:hover {
         background-color: $accent;
+
         path {
           fill: #fff;
         }
       }
-    } 
+    }
 
     .products-item__star {
       display: block;
@@ -126,7 +153,15 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 60px;
-  } 
+
+    @include for-850-px {
+      margin-bottom: 30px;
+    }
+
+    @include for-590-px {
+      max-width: 100%;
+    }
+  }
 
   &__link-box {
     position: absolute;
@@ -175,6 +210,10 @@
     color: $accent;
     display: block;
     margin-bottom: 35px;
+
+    @include for-850-px {
+      margin-bottom: 15px;
+    }
   }
 
   &:hover {
@@ -188,7 +227,18 @@
 .filter {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 80px;
+
+  @include for-590-px {
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    @include for-590-px {
+      margin-top: 15px;
+    }
+  }
 
   &__list:not(:last-child) {
     margin-right: 30px;
@@ -213,24 +263,50 @@
 .lamp {
 
   &__inner {
-    display: flex;
+    display: flex;    
+
+    @include for-1080-px{
+      flex-wrap: wrap;
+    }
   }
 
   &__items {
-    background-color: #feefe2;
-    width: 100%;
+    background-color: #feefe2;    
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 80px;
+    width: 100%;
+    @include for-1080-px {      
+      padding-bottom: 10px;
+    }
 
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include for-1080-px {
+        margin-right: 0;
+        margin-bottom: 110px;
+        padding-bottom: 10px;
+      }
+
+      @include for-850-px {        
+        margin-bottom: 70px;
+      }
     }
   }
 
   &__images {
     margin-top: -85px;
     object-fit: cover;
+
+    @include for-850-px {
+      height: 200px;
+      margin: -30px 30px 0 0;
+    }
+
+    @include for-590-px {
+      margin-top: 20px;
+    }
   }
 
   &__item {
@@ -238,6 +314,10 @@
     flex-direction: column;
     justify-content: center;
     color: $title;
+
+    @include for-850-px {      
+      margin-top: 20px;
+    }
   }
 
   &__title {
@@ -263,6 +343,12 @@
     font-size: 15px;
     color: $default;
     position: relative;
+    transition: all .3s ease-out;   
+    
+    @include for-590-px {
+      margin-right: 20px;
+      padding-left: 10px;
+    }
 
     &::before {
       content: '';
@@ -272,6 +358,15 @@
       background-image: url('../images/arrow-link-right.svg');
       right: 20px;
       top: 28px;
+
+      @include for-590-px {
+        right: 10px;
+      }
+    }
+
+    &:hover {
+      background-color: $main;
+      border-color: transparent;
     }
   }
 }

@@ -1,5 +1,5 @@
 .blog {
-  padding-bottom: 70px;  
+  padding-bottom: 70px;
 
   &__top {
     display: flex;
@@ -9,6 +9,12 @@
     @extend %DMSans-700;
     font-size: 16px;
     color: #262626;
+  }
+
+  &__title {
+    @include for-590-px {
+      font-size: 30px;
+    }
   }
 
   &__link {
@@ -31,10 +37,32 @@
   &__items {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include for-1200-px {
+      justify-content: center;
+    }
   }
 
   &__item {
     max-width: 370px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      @include for-1200-px {
+        margin-bottom: 30px;
+      }
+
+      @include for-790-px {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__item-inner {
+    padding: 30px;
+    background-color: #fff;
     position: relative;
 
     &::before {
@@ -44,14 +72,9 @@
       background-color: $accent;
       border-radius: 15px;
       color: #fff;
-      top: 235px;
+      top: -16px;
       left: 30px;
     }
-  }
-
-  &__item-inner {
-    padding: 30px;
-    background-color: #fff;
   }
 
   &__item-text {
@@ -98,23 +121,40 @@
 
 .partners {
   position: relative;
-  background-color: #fef7f0;  
+  background-color: #fef7f0;
   z-index: -1;
 
+  @include for-590-px {
+    display: none;
+  }
+
   &__inner {
-    margin-top: -175px;    
+    margin-top: -175px;
     padding: 260px 0 85px;
     z-index: 999;
+
+    @include for-850-px {
+      margin-top: -75px;
+      padding: 90px 0 85px;
+    }
   }
 
   &__list {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;    
+    align-items: center;
   }
 
   &__item {
     display: flex;
     align-items: center;
+
+    img {
+      @include for-850-px {
+        max-width: 20%;
+      }
+    }
   }
-} 
+
+
+}

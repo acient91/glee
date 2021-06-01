@@ -1,10 +1,18 @@
 .slider {
-  
+
   &__inner {
     padding-top: 220px;
-    z-index: 2;    
+    z-index: 2;
     background-color: #fcd7b6;
     position: relative;
+
+    @include for-850-px {
+      padding-top: 100px;
+    }
+
+    @include for-590-px {
+      padding-top: 50px;
+    }
 
     &::before {
       content: '';
@@ -18,12 +26,32 @@
       top: 100px;
       right: 80px;
       width: 100%;
+
+      @include for-1080-px {
+        top: 155px;
+        min-height: 460px;
+      }
+
+      @include for-590-px {
+        top: 224px;
+        min-height: 300px;
+      }
     }
   }
 
   &__items {
     display: flex;
     justify-content: space-around;
+  }
+
+  &__item {
+    padding: 0 30px;
+  }
+
+  &__content {
+    @include for-1200-px {
+      padding: 30px 0;
+    }
   }
 
   &__title {
@@ -33,6 +61,18 @@
     text-transform: uppercase;
     max-width: 420px;
     margin-bottom: 30px;
+
+    @include for-1200-px {
+      font-size: 60px;
+    }
+
+    @include for-1080-px {
+      font-size: 50px;
+    }
+
+    @include for-590-px {
+      font-size: 30px;
+    }
   }
 
   &__text {
@@ -50,6 +90,10 @@
     @extend %Rubik-500;
     font-size: 15px;
     position: relative;
+
+    @include for-590-px {
+      padding: 22px 55px 22px 25px;
+    }
   }
 
   &__link::after {
@@ -66,7 +110,22 @@
   }
 
   &__img {
-    margin-top: 60px;
+    margin: 60px 0 80px;
+    max-width: 640px;
+    object-fit: contain;
+
+    @include for-1080-px {
+      max-width: 440px;
+    }
+  }
+}
+
+
+
+.slick-slide img {
+
+  @include for-850-px {
+    display: none;
   }
 }
 
@@ -74,6 +133,14 @@
   display: flex;
   justify-content: center;
   padding: 200px 0 45px;
+
+  @include for-1080-px {
+    padding: 80px 0 45px;
+  }
+
+  @include for-590-px {
+    padding: 35px 0;
+  }
 
   .slick-active {
     button {
@@ -87,7 +154,7 @@
 
   button {
     width: 30px;
-    height: 30px;   
+    height: 30px;
     border-radius: 50%;
     font-size: 10px;
     @extend %Rubik-500;
@@ -100,14 +167,24 @@
   padding: 50px 0;
   background-color: #fef7f0;
 
+  @include for-590-px {
+    padding-bottom: 0;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-around;
+    padding-left: 110px;
+
+    @include for-850-px {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
     position: relative;
     line-height: 2;
+
 
     &::before {
       content: '';
@@ -118,6 +195,10 @@
       left: -90px;
       width: 50px;
       height: 50px;
+
+      @include for-1200-px {
+        left: -60px;
+      }
     }
 
     &--support::before {
@@ -130,6 +211,16 @@
 
     &--payment::before {
       background-image: url('../images/icons/payment.svg');
+    }
+
+    &:not(:last-child) {
+      margin: 0 60px 50px 0;
+    }
+  }
+
+  &__item--payment {
+    @include for-1200-px {
+      margin-right: 23px;
     }
   }
 
@@ -144,5 +235,9 @@
     font-size: 16px;
     color: #585858;
     max-width: 220px;
+
+    @include for-1200-px {
+      max-width: 160px;
+    }
   }
 }
