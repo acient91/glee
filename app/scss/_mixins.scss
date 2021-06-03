@@ -10,6 +10,12 @@
   }
 }
 
+@mixin for-670-px {
+  @media (max-width: 670px) {
+    @content;
+  }
+}
+
 @mixin for-790-px {
   @media (max-width: 790px) {
     @content;

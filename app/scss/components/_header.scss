@@ -9,7 +9,7 @@
 }
 
 .logo__link {
-  z-index: 2;
+  z-index: 20;
 
   @include for-590-px {
     margin-right: 50px;
@@ -42,7 +42,7 @@
       align-items: center;
       background-color: transparent;
       order: 1;
-      z-index: 2;
+      z-index: 20;
 
       span {
         width: 100%;
@@ -96,7 +96,7 @@
     transform: translateY(0);
     transition: transform .3s ease;
     overflow: hidden;
-    z-index: 1;
+    z-index: 15;
   }
 
   &__item {

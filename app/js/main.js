@@ -1,8 +1,12 @@
 $(function () {
+ 
+  $('.shop__btn').on('click', function () {
+    $('.shop__filters').toggleClass('shop__filters--active');
+  });
 
-  $('.menu__btn').on('click', function(){
+  $('.menu__btn').on('click', function() {
     $('.menu__list').toggleClass('menu__list--active');
-  })
+  });
 
   $('.product-one__tabs-link').on('click', function(e){
     e.preventDefault();
@@ -48,10 +52,12 @@ $(function () {
 
   $('.buttons-list').on('click', function () {
     $('.products-item').addClass('products-item--list');
+    $('.shop-content__inner').addClass('shop-content__inner--list');
   });
 
   $('.buttons-grid').on('click', function () {
     $('.products-item').removeClass('products-item--list');
+    $('.shop-content__inner').removeClass('shop-content__inner--list');
   });
 
   $('.slider__inner').slick({
