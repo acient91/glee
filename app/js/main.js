@@ -1,5 +1,9 @@
 $(function () {
 
+  $('.blog-details__button').on('click', function () {
+    $('.blog-details__filter').toggleClass('blog-details__filter--active');
+  });
+
   $('.blog-one__btn').on('click', function () {
     $('.blog-details__filter').toggleClass('blog-details__filter--active');
   });

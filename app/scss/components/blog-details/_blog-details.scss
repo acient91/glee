@@ -1,6 +1,10 @@
 .blog-details {
   padding: 120px 0 70px;
 
+  @include for-930-px {
+    padding: 70px 0;
+  }
+
   .partners__inner {
     margin-top: 0;
     padding: 80px 0 90px;
@@ -15,6 +19,10 @@
     font-size: 36px;
     color: #333333;
     @extend %Rubik-400;
+
+    @include for-670-px {
+      font-size: 32px;
+    }
   }
 
   &__sub-title,
@@ -55,10 +63,32 @@
     }
   }
 
+  &__button {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-image: url('../images/icons/filter.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+    z-index: 3;
+
+    @include for-850-px {
+      display: block;
+    }
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     margin-bottom: 120px;
+
+    @include for-670-px {
+      margin-bottom: 60px;
+    }
   }
 
   &__img {
@@ -69,6 +99,24 @@
   &__content {
     margin-right: 70px;
     max-width: 830px;
+
+    @include for-1200-px {
+      max-width: 750px;
+      margin-right: 20px;
+    }
+
+    @include for-1080-px {
+      max-width: 620px;
+    }
+
+    @include for-930-px {
+      max-width: 525px;
+    }
+
+    @include for-850-px {
+      max-width: 100%;
+      margin-right: 0;
+    }
   }
 
   &__content-item {
@@ -85,11 +133,19 @@
     justify-content: space-between;
     align-items: center;
     border-top: 2px solid #ebebeb;
+
+    @include for-850-px {
+      display: block;
+    }
   }
 
   &__author-item {
     display: flex;
     align-items: center;
+
+    @include for-850-px {
+      margin-bottom: 15px;
+    }
   }
 
   &__author-images {
@@ -147,7 +203,6 @@
       fill: #a1a1a1;
     }
 
-
     &:not(:last-child) {
       margin-right: 20px;
     }
@@ -164,6 +219,19 @@
 
     @include for-850-px {
       display: none;
+    }
+  }
+
+  &__filter--active {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    z-index: 2;
+
+    @include for-850-px {
+      display: block;
     }
   }
 
@@ -295,7 +363,6 @@
 
   &__item {
     display: flex;
-
     &:not(:last-child) {
       margin-bottom: 30px;
     }
@@ -306,6 +373,10 @@
       margin-left: 130px;
       position: relative;
 
+      @include for-670-px {
+        margin-left: 0;
+      }
+
       &::before,
       &::after {
         content: '';
@@ -314,6 +385,21 @@
         min-height: 1px;
         background-color: #e0e0e0;
 
+        @include for-1200-px {
+          max-width: 750px;
+        }
+
+        @include for-1080-px {
+          max-width: 620px;
+        }
+
+        @include for-930-px {
+          max-width: 525px;
+        }
+
+        @include for-930-px {
+          max-width: 100%;
+        }
       }
 
       &::before {
@@ -330,17 +416,30 @@
     margin-right: 30px;
     width: 100px;
     height: 100px;
+
+    @include for-590-px {
+      width: 75px;
+      height: 75px;
+    }
   }
 
   &__info {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+
+    @include for-590-px {
+      flex-direction: column;
+    }
   }
 
   &__author {
     color: $default;
     @extend %DMSans-700;
+
+    @include for-590-px {
+      margin-bottom: 15px;
+    }
   }
 
   &__date {
@@ -354,6 +453,10 @@
     @extend %Rubik-400;
     line-height: 2;
     margin-bottom: 20px;
+
+    @include for-590-px {
+      line-height: 1.4;
+    }
   }
 
   &__link {
@@ -395,7 +498,7 @@
 
   &__label-textarea {
     position: relative;
-    width: 100%;
+    width: 100%;    
 
     &::before {
       content: '';
@@ -413,6 +516,10 @@
   &__label-name {
     position: relative;
 
+    @include for-1200-px {
+      width: 100%;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -428,6 +535,10 @@
 
   &__label-mail {
     position: relative;
+
+    @include for-1200-px {
+      width: 100%;
+    }
 
     &::before {
       content: '';
@@ -449,6 +560,10 @@
     outline-color: $accent;
     margin-bottom: 20px;
 
+    @include for-1200-px {
+      width: 100%;
+    }
+
     &::placeholder {
       color: #999999;
       @extend %Rubik-400;
@@ -462,7 +577,7 @@
     border: 1px solid #e5e5e5;
     padding: 20px 50px 20px 20px;
     outline-color: $accent;
-    margin-bottom: 40px;
+    margin-bottom: 40px;    
 
     &::placeholder {
       color: #999999;
