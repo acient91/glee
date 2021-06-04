@@ -161,6 +161,10 @@
 
   &__filter {
     width: 270px;
+
+    @include for-850-px {
+      display: none;
+    }
   }
 
   &__form {
@@ -243,6 +247,12 @@
   margin-top: -70px;
   position: relative;
   z-index: 2;
+
+  @include for-1200-px {
+    width: 245px;
+    padding: 10px;
+    margin-top: -44px;
+  }
 
   &__date,
   &__author {

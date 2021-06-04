@@ -28,6 +28,12 @@
   }
 }
 
+@mixin for-930-px {
+  @media (max-width: 930px) {
+    @content;
+  }
+}
+
 @mixin for-1080-px {
   @media (max-width: 1080px) {
     @content;
