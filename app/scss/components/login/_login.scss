@@ -9,6 +9,10 @@
   &__form {
     margin: 0 auto 35px;
     max-width: 470px;
+
+    @include for-670-px {
+      max-width: 100%;
+    }
   }
 
   &__label {
@@ -22,7 +26,7 @@
     margin: 15px 0 30px;
     border: 2px solid #f6f6f6;
     min-height: 60px;
-    outline: transparent;
+    outline: $accent;
     padding: 0 15px;
   }
 
@@ -45,11 +49,21 @@
     justify-content: space-between;
     padding-bottom: 35px;
     border-bottom: 2px solid #f6f6f6;
+
+    @include for-430-px {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   &__box {
     padding-left: 28px;
     position: relative;
+
+    @include for-430-px {
+      text-align: left;
+      margin-bottom: 15px;
+    }
   }
 
   &__checkbox {
@@ -59,7 +73,8 @@
     clip: rect(0 0 0 0);
     left: 0;
     position: absolute;
-    &:checked + .modal__check {
+
+    &:checked+.modal__check {
       background-image: url('../images/icons/check.svg');
       background-repeat: no-repeat;
       background-size: cover;
@@ -89,6 +104,11 @@
     display: block;
     margin: 0 auto 120px;
     max-width: 470px;
+
+    @include for-670-px {
+      width: 100%;
+      margin: 0 auto 60px;
+    }
   }
 
   &__text {
