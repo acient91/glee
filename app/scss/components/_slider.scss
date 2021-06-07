@@ -122,12 +122,12 @@
 
 
 
-.slick-slide img {
+// .slick-slide img {
 
-  @include for-850-px {
-    display: none;
-  }
-}
+//   @include for-850-px {
+//     display: none;
+//   }
+// }
 
 .slick-dots {
   display: flex;

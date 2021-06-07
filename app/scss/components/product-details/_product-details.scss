@@ -1,5 +1,9 @@
 .product-page {
   padding: 120px 0;
+
+  @include for-590-px {
+    padding: 60px 0;
+  }
 }
 
 .product-one {
@@ -7,15 +11,36 @@
     display: flex;
     align-items: center;
     margin-bottom: 75px;
+
+    @include for-1200-px {
+      flex-direction: column;
+    }
   }
 
   &__slide {
     width: 550px;
     margin-right: 70px;
+
+    @include for-1200-px {
+      margin-right: 0;
+    }
+
+    @include for-590-px {
+      width: 100%;
+    }
   }
 
   &__content {
     width: 550px;
+
+    @include for-1200-px {
+      order: -1;
+      margin-bottom: 20px;
+    }
+
+    @include for-590-px {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -23,10 +48,18 @@
     color: #333333;
     font-size: 40px;
     margin-bottom: 25px;
+
+    @include for-790-px {
+      font-size: 32px;
+    }   
   }
 
   &__star {
     margin-bottom: 40px;
+
+    @include for-790-px {
+      margin-bottom: 20px;
+    }
   }
 
   &__price {
@@ -35,23 +68,48 @@
     font-size: 30px;
     margin-bottom: 35px;
     display: block;
+
+    @include for-790-px {
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
-    width: 610px;
     @extend %Rubik-400;
     line-height: 2;
     color: $title;
     margin-bottom: 15px;
+
+    @include for-790-px {
+      width: 500px;
+    }
+
+    @include for-590-px {
+      width: 100%;
+      line-height: 1.4;
+    }
   }
 
   &__box {
     display: flex;
     margin-bottom: 60px;
+
+    @include for-790-px {
+      margin-bottom: 30px;
+    }
+
+    @include for-430-px {
+      flex-direction: column;
+    }
   }
 
   &__input {
     margin-right: 15px;
+
+    @include for-430-px {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
   }
 
   &__btn {
@@ -63,6 +121,10 @@
     @extend %Rubik-400;
     line-height: 2;
     transition: all .3s ease-in;
+
+    @include for-590-px {
+      padding: 9px 15px;
+    }
 
     &:hover {
       background-color: $main;
@@ -76,15 +138,25 @@
     line-height: 2;
   }
 
-  &__tabs{
+  &__tabs {
     margin-bottom: 120px;
+
+    @include for-590-px {
+      margin-bottom: 60px;
+    }
   }
-  &__tabs-top {   
-     display: flex;
+
+  &__tabs-top {
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 35px;
+
+    @include for-790-px {
+      flex-direction: column;
+    }
   }
+
   &__tabs-link {
     max-width: 240px;
     min-height: 55px;
@@ -92,14 +164,25 @@
     border-radius: 4px;
     background-color: #edf1f4;
     color: $title;
-    font-size: 18px; 
+    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-    & + .product-one__tabs-link {
+
+    @include for-790-px {
+      max-width: 100%;
+    }
+
+    &+.product-one__tabs-link {
       margin-left: 13px;
+
+      @include for-790-px {
+        margin-left: 0;
+        margin-top: 15px;
+      }
     }
   }
+
   &__tabs-link--active {
     color: #fff;
     background-color: $accent;
@@ -111,12 +194,13 @@
     line-height: 2;
     color: $title;
   }
-  &__tabs-text--active{
+
+  &__tabs-text--active {
     display: block;
   }
 
   &__related-top {
-    position: relative;    
+    position: relative;
   }
 
   &__related-title {
@@ -124,6 +208,15 @@
     color: $title;
     @extend %DMSans-700;
     margin-bottom: 70px;
+
+    @include for-590-px {
+      font-size: 28px;
+      margin-bottom: 45px;
+    }
+
+    @include for-430-px {
+      font-size: 24px;
+    }
   }
 }
 
@@ -139,10 +232,20 @@
   height: 50px;
   border: 2px solid $accent;
   border-radius: 4px;
+
+  @include for-430-px {
+    top: 35px;
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .slick-prev {
   margin-right: 70px;
+
+  @include for-430-px {
+    margin-right: 45px;
+  }
 }
 
 .slick-disabled {
@@ -152,36 +255,69 @@
 .product-slide {
   display: flex;
 
+  @include for-590-px {
+    flex-direction: column;
+  }
+
   &__small {
-    width: 140px;
+    max-width: 140px;
     margin-right: 25px;
+
+    @include for-590-px {
+      display: none;
+    }
   }
 
   &__small-item {
-    width: 140px;
+    max-width: 140px;
     height: 160px;
     border: 2px solid #f2f2f2;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     img {
-      width: 140px;
+      max-width: 140px;
       height: 156px;
       object-fit: contain;
-    }    
+      width: 100%;
+    }
   }
 
   &__big {
-    width: 390px;
+    max-width: 390px;
+    margin: 0 auto;
+
+    @include for-430-px {
+      max-width: 250px;
+    }
   }
 
   &__big-item {
-    width: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 390px;
     height: 530px;
     border: 2px solid #f2f2f2;
 
+    @include for-590-px {
+      max-width: 100%;
+      height: 200px;
+    }
+
     img {
-      width: 390px;
+      max-width: 390px;
       height: 526px;
+      width: 100%;
+
+      @include for-590-px {
+        max-width: 100%;
+        height: 190px;
+        margin: 0 auto;
+      }
     }
   }
 }
