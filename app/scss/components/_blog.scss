@@ -82,13 +82,13 @@
   }
 
   &__item-text {
-    @extend %DMSans-500;
-    color: #262626;
-    font-size: 18px;
     min-height: 75px;
     border-bottom: 1px solid #e0e0e0;
     margin-bottom: 20px;
     display: block;
+    @extend %DMSans-500;
+    color: #262626;
+    font-size: 18px;
   }
 
   &__item-info {
@@ -97,6 +97,11 @@
     font-size: 12px;
     line-height: 2;
     text-transform: uppercase;
+
+    @include for-430-px {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__ltem-date,

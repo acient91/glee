@@ -1,15 +1,19 @@
 .terms {
   padding: 120px 0;
- 
+
+  @include for-590-px {
+    padding: 60px 0;
+  }
 
   &__title {
     font-size: 24px;
     color: $title;
     margin-bottom: 30px;
   }
-  &__list {    
+
+  &__list {
     list-style-type: decimal-leading-zero;
-    list-style-position: outside;    
+    list-style-position: outside;
   }
 
   &__item {
@@ -17,22 +21,36 @@
     color: $title;
     @extend %Rubik-400;
     line-height: 2;
-    margin-left: 30px;   
+    margin-left: 30px;
+
     &:last-child {
       margin-bottom: 75px;
+
+      @include for-590-px {
+        margin-bottom: 45px;
+      }
     }
   }
 
-  &__subtitle{
+  &__subtitle {
     font-size: 24px;
     color: $title;
     line-height: 2;
     margin-bottom: 30px;
+
+    @include for-430-px {
+      line-height: 1.4;
+    }
   }
-  &__text{
+
+  &__text {
     @extend %Rubik-400;
     color: $title;
     line-height: 2;
     margin-bottom: 30px;
+
+    @include for-430-px {
+      line-height: 1.4;
+    }
   }
 }
